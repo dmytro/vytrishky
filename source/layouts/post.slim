@@ -22,9 +22,7 @@ html[lang="en"]
     = partial :nav
     = partial :header, locals: {background: post_top_image }
     article
-      .container
-        .row
-          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-            = yield
+      = yield
+
 
     = partial :footer
