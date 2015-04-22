@@ -1,0 +1,13 @@
+- grid_size = case images.count
+- when 4..9; then 2
+- when 9..16; then 3
+- when 9..25; then 4
+- else 5
+- idx = 0
+
+table.gallery.card border=0
+  - grid_size.times do
+    tr.gallery-row
+    - grid_size.times do
+      td.gallery-cell  style="padding-bottom: #{100.0/grid_size/1.5}%;"
+        .gallery-image 1

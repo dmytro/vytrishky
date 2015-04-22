@@ -1,0 +1,7 @@
+- layout = locals[:layout] ? layout : ""
+
+.photo-wrapper[class="photo-#{layout}"]
+  .card
+    .card-image style="background-image: url('#{image_path image}')"
+    .card-text
+      = yield

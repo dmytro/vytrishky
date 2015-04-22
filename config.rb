@@ -21,6 +21,11 @@ activate :blog
 
 helpers do
 
+  #
+  # Layout helpers
+  #
+
+  # Image at the top of the page
   def post_top_image
     image_path data.page.top_image
   end
