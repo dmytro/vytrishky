@@ -1,13 +1,17 @@
-- grid_size = case images.count
-- when 4..9; then 2
-- when 9..16; then 3
-- when 9..25; then 4
-- else 5
+- (grid_h, grid_w) = case images.count
+- when 4..9; then [2,2]
+- when 9..16; then [3,3]
+- when 9..18; then [3,4]
+- when 18..20; then [3,5]
+- when 20..25; then [4,5]
+- else [5,5]
 - idx = 0
 
-table.gallery.card border=0
-  - grid_size.times do
-    tr.gallery-row
-    - grid_size.times do
-      td.gallery-cell  style="padding-bottom: #{100.0/grid_size/1.5}%;"
-        .gallery-image 1
+.card style="position: relative;"
+  table.gallery border=0
+    - grid_h.times do
+      tr.gallery-row
+        - grid_w.times do
+          td.gallery-cell   style="padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{image_path images[idx]}); "
+          - idx += 1
+  .gallery-text-box
