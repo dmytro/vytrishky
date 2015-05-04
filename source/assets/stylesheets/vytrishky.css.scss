@@ -1,10 +1,41 @@
+
+
+//
+// Sepia
+//
+@mixin sepia ($percent) {
+    -webkit-filter: sepia($percent);
+    -moz-filter: sepia($percent);
+    filter: sepia($percent);
+
+}
+
+.sepia-30 {
+    @include sepia(.30)
+}
+
+.sepia-50 {
+    @include sepia(.50)
+}
+
+.sepia-80 {
+    @include sepia(.80)
+}
+
+.sepia {
+    @include sepia(1)
+}
+
+// ------------------------------------------------------------------
+// Vignette
+// ------------------------------------------------------------------
 @mixin vignette ($opacity1,$opacity2) {
     &:before {
         position: absolute;
-        top: 0;　left: 0; right: 0; bottom: 0;
+        top: 0;　left: 0; //right: 0; bottom: 0;
         width: 100%;
         height: 100%;
-        content: "";
+        content: '';
         background-image: radial-gradient(
                                   ellipse ,
                                   rgba(0,0,0,$opacity1), rgba(0,0,0,$opacity2)
@@ -12,10 +43,20 @@
     }
 
 }
+.vignette-90 {
+    @include vignette(.1, .9)
+}
 
+.vignette-60 {
+    @include vignette(.07, .6)
+}
+
+// ------------------------------------------------------------------
+
+.intro-header {
+    position: relative;
+}
 .divider {
-    -webkit-filter: sepia(50%);
-    /* filter: sepia(50%); */
     padding-top: 5em;
     padding-bottom: 5em;
     color: white;
@@ -27,12 +68,6 @@
     @include vignette(0.1, 0.9)
 }
 
-header.intro-header {
-    -webkit-filter: sepia(50%);
-    filter: sepia(30%);
-
-    @include vignette(.2, .9)
-}
 
 .photo-wrapper {
     padding-bottom: 75%;
