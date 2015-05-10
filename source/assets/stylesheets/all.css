@@ -4,6 +4,8 @@
 *= require material
 *= require clean-blog.min
 *= require fonts
+*= require jquery.fancybox
+*= require fancybox-override
 *= require vytrishky
 
 */
