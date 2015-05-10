@@ -1,4 +1,7 @@
-header.intro-header[style="background-image: url('#{background}')"]
+/ - if locals[:title_video]
+/   = partial :video, locals: {video: :title_video, image: background}
+/ - else
+header.intro-header.sepia-50.vignette-60[style="background-image: url('#{background}')"]
   .container
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1

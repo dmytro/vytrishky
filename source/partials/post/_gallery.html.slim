@@ -15,5 +15,6 @@
       tr.gallery-row
         - grid_w.times do
           td.gallery-cell   style="padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{image_path images[idx]}); "
+            = link_to "", image_path(images[idx]), class: "fancybox"
           - idx += 1
   .gallery-text-box
