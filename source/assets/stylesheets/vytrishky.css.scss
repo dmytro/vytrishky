@@ -9,22 +9,18 @@
     filter: sepia($percent);
 
 }
+.sepia-10  { @include sepia(.10)}
+.sepia-20  { @include sepia(.20)}
+.sepia-30  { @include sepia(.30)}
+.sepia-40  { @include sepia(.40)}
+.sepia-50  { @include sepia(.50)}
+.sepia-60  { @include sepia(.60)}
+.sepia-70  { @include sepia(.70)}
+.sepia-80  { @include sepia(.80)}
+.sepia-90  { @include sepia(.90)}
+.sepia-100 { @include sepia(1)  }
+.sepia     { @include sepia(1)  }
 
-.sepia-30 {
-    @include sepia(.30)
-}
-
-.sepia-50 {
-    @include sepia(.50)
-}
-
-.sepia-80 {
-    @include sepia(.80)
-}
-
-.sepia {
-    @include sepia(1)
-}
 
 // ------------------------------------------------------------------
 // Vignette
