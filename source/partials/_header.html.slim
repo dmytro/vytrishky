@@ -1,7 +1,11 @@
 / - if locals[:title_video]
 /   = partial :video, locals: {video: :title_video, image: background}
 / - else
-header.intro-header.sepia-50.vignette-60[style="background-image: url('#{background}')"]
+- defaults = ["sepia-40", "vignette-90"]
+- filters = data.page.intro.filters || defaults rescue defaults
+- image = data.page.intro.image rescue ""
+
+header.intro-header[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
   .container
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
