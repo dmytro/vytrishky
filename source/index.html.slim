@@ -1,0 +1,16 @@
+---
+layout: post
+intro:
+  image: backgrounds/index.jpg
+  filters:
+    - vignette-90
+---
+ul
+  - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+    li
+      h5= year
+      ul
+        - articles.each do |article|
+          li
+            a href="#{article.url}"
+              = article.title
