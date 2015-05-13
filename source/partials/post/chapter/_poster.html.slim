@@ -1,0 +1,13 @@
+- if locals[:image]
+  - filters = locals[:filters] || ["sepia-40", "vignette-90"]
+  .intro-header.chapter-divider[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          .post-heading
+            - if locals[:title]
+              h1= title
+            - if locals[:subtitle]
+              h2.subheading= subtitle
+            - if locals[:summary]
+              span.meta= summary
