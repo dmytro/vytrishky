@@ -1,15 +1,15 @@
 - images.each do |image|
+  - content = capture do
+    = partial "post/photo", locals: {image: image, layout: layout || :landscape}
+      |
   - case images.count
   - when 2
     .col-sm-6
-      = partial "post/photo", locals: {image: image, layout: layout || :landscape}
-        |
+      = content
   - when 3
     .col-sm-4
-      = partial "post/photo", locals: {image: image, layout: layout || :landscape}
-        |
+      = content
   - when 4
     .col-sm-3
-      = partial "post/photo", locals: {image: image, layout: layout || :landscape}
-        |
+      = content
 = yield

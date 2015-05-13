@@ -25,9 +25,28 @@ helpers do
   # Layout helpers
   #
 
+  # Shorten img file list.
+  # Convert list of %w{11 22 33} -> ["IMG_11.jpg", ...]
+  def imgs(list)
+    Array(list).map{ |x| "IMG_#{x}.jpg" }
+  end
+
   # Image at the top of the page
   def post_top_image
     image_path data.page.top_image
+  end
+
+  def post_image(image)
+    prefix = data.page.images.basepath rescue ''
+    [prefix, image].join("/").sub(/^\//,'')
+  end
+
+  def post_image_path(image)
+    image_path(post_image(image))
+  end
+
+  def post_image_link(image)
+    image_link post_image image
   end
 
   def chapters( post )
