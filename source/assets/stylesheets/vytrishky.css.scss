@@ -3,24 +3,28 @@
 //
 // Sepia
 //
-@mixin sepia ($percent) {
-    -webkit-filter: sepia($percent);
-    -moz-filter: sepia($percent);
-    filter: sepia($percent);
 
+
+@each $filter in ("grayscale" "sepia") {
+    @each $value in (10 20 30 40 50 60 70 80 90 100) {
+
+        .#{$filter}-#{$value} {
+        -webkit-filter: unquote("#{$filter}(#{$value}%)");
+        -moz-filter: unquote("#{$filter}(#{$value}%)");
+        -ms-filter: unquote("#{$filter}(#{$value}%)");
+        -o-filter: unquote("#{$filter}(#{$value}%)");
+        filter: unquote("#{$filter}(#{$value}%)");
+    }
+        .#{$filter} {
+        -webkit-filter: unquote("#{$filter}(100%)");
+        -moz-filter: unquote("#{$filter}(100%)");
+        -ms-filter: unquote("#{$filter}(100%)");
+        -o-filter: unquote("#{$filter}(100%)");
+        filter: unquote("#{$filter}(100%)");
+
+    }
+    }
 }
-.sepia-10  { @include sepia(.10)}
-.sepia-20  { @include sepia(.20)}
-.sepia-30  { @include sepia(.30)}
-.sepia-40  { @include sepia(.40)}
-.sepia-50  { @include sepia(.50)}
-.sepia-60  { @include sepia(.60)}
-.sepia-70  { @include sepia(.70)}
-.sepia-80  { @include sepia(.80)}
-.sepia-90  { @include sepia(.90)}
-.sepia-100 { @include sepia(1)  }
-.sepia     { @include sepia(1)  }
-
 
 // ------------------------------------------------------------------
 // Vignette
