@@ -133,6 +133,20 @@ blockquote {
     }
 }
 
+.gallery-text-box {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background-color: #fff;
+            padding: {
+                left: 1.5ex;
+                right: 1.5ex;
+                top: .5ex;
+                bottom: 0;
+            }
+            font-size: 85%;
+            overflow: auto;
+}
+
 .card {
     .gallery-text {
         height: 15%;
