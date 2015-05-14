@@ -4,10 +4,20 @@
  *= require bootstrap.min
  *= require jquery.fancybox
  *= require clean-blog.min
+ *= require jquery.easing.min
+ *= require jquery.scrollstop
+ *= require jquery.scrollsnap
 
  */
 
 $(document).ready(function() {
+
+    $(document).scrollsnap({
+        snaps: '.snap',
+        proximity: 200,
+        latency: 500
+    });
+
 	$(".fancybox")
         .attr('rel', 'gallery')
         .fancybox({

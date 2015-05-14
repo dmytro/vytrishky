@@ -5,7 +5,7 @@
 - filters = data.page.intro.filters || defaults rescue defaults
 - image = data.page.intro.image rescue ""
 
-header.intro-header[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
+header.intro-header.snap[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
   .container
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
