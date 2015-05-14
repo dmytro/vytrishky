@@ -1,6 +1,6 @@
 - images.each do |image|
   - content = capture do
-    = partial "post/photo", locals: {image: image, layout: layout || :landscape}
+    = partial :photo, locals: {image: image, layout: layout || :landscape}
       |
   - case images.count
   - when 2
