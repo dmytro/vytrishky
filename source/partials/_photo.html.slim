@@ -3,6 +3,6 @@
 .photo-wrapper[class="photo-#{layout}"]
   .card
     .card-image style="background-image: url('#{post_image_path image}')"
+      = link_to "", post_image_path(image), class: "fancybox"
     .card-text
       = yield
-  = link_to "", post_image_path(image), class: "fancybox"
