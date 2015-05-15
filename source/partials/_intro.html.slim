@@ -12,4 +12,4 @@ header.intro-header.snap[style="background-image: url('#{post_image_path image}'
         .post-heading
           h1= data.page.title
           h2.subheading= data.page.summary
-          span.meta= data.page.description
+          span.meta= data.page.intro.text || data.page.description
