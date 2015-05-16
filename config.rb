@@ -49,6 +49,40 @@ helpers do
   # Layout helpers
   #
 
+  def default_filters
+    ["sepia-40", "vignette-90"]
+  end
+
+  def photo(image, filters: default_filters, layout: :landscape, &block)
+    partial :photo, locals: {image: image, filters: filters, layout: layout} do
+      block_given? ? yield : ""
+    end
+  end
+
+  def photos3(images, **params, &block)
+    partial :photos3, locals: {images: images}.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
+
+  def chapter
+    partial :chapter do
+      block_given? ? yield : ""
+    end
+  end
+
+  def divider(image, **params, &block)
+    partial :divider, locals: {image: image}.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
+
+  def gallery(images, **params, &block)
+    partial :gallery, locals: { images: images }.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
+
   # Shorten img file list.
   # Convert list of %w{11 22 33} -> ["IMG_11.jpg", ...]
   def imgs(list)
@@ -111,11 +145,6 @@ helpers do
     "active" if page_active?(url)
   end
 
-  def markdown(&block)
-    raise ArgumentError, "Missing block" unless block_given?
-    content = capture_html(&block)
-    concat Tilt['markdown'].new { content }.render
-  end
 end
 
 # set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true, smart: true
