@@ -155,6 +155,9 @@ blockquote {
 }
 
 .card {
+    &.card-light-shadow {
+        box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.33), 8px 8px 15px rgba(255, 255, 255, 0.15), ;
+    }
     .gallery-text {
         height: 15%;
     }
