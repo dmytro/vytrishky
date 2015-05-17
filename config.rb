@@ -83,6 +83,18 @@ helpers do
     end
   end
 
+  def pull_left(image, **params)
+    partial :pull_left, locals: { image: image}.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
+
+  def pull_right(image, **params)
+    partial :pull_right, locals: { image: image}.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
+
   # Shorten img file list.
   # Convert list of %w{11 22 33} -> ["IMG_11.jpg", ...]
   def imgs(list)
