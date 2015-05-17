@@ -1,0 +1,5 @@
+.card.google-map class="#{locals[:css_class]}"
+  .card-image
+    iframe height="300px" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="#{url}"
+  .card-text
+    = yield if block_given?
