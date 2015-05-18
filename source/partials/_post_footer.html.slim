@@ -1,7 +1,8 @@
-.container
-  = partial :series_nav, locals: { position: :bottom }
+= partial :series_nav, locals: { position: :bottom }
+p
+.container.well
   .row
-    .col-md-6
+    .col-md-5
       = partial :previous_posts
-    .col-md-6
+    #tags.col-md-5.col-md-offset-1
       = partial :tags

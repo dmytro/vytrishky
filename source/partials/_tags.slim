@@ -1,8 +1,13 @@
+h4 Теги
+H5 Цієї статті
 .footer-links
-  h5 This Post Tags
-  - current_page.tags.each do |tag|
-    = link_to tag, tag_path(tag)
-
-  h5 All tags
-  - blog.tags.keys.each do |key|
-    = link_to "#{key}(#{blog.tags[key].count})", tag_path(key)
+  ul
+    li
+      - current_page.tags.each do |tag|
+        = link_to tag, tag_path(tag)
+h5 Інші статті
+.footer-links
+  ul
+    li
+      - blog.tags.keys.each do |key|
+        = link_to "#{key}(#{blog.tags[key].count})", tag_path(key)
