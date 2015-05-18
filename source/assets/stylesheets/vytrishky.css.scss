@@ -251,3 +251,25 @@ video#bgvid {
         }
     }
 }
+
+.footer-links  {
+    li {
+        list-style: none;
+        .meta {
+            font-size: 70%;
+            text-indent: 3ex;
+        }
+    }
+
+    a {
+        margin-right: 1ex;
+        font-size: 85%;
+        display: inline-block;
+        color: #666;
+        text-decoration: none;
+        a:hover {
+        color: #666;
+        text-decoration: none;
+        }
+    }
+}

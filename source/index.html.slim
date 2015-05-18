@@ -1,9 +1,11 @@
 ---
-layout: post
+pageable: true
+layout: simple
 intro:
   image: backgrounds/index.jpg
   filters:
     - vignette-90
+title: Індекс статей за роками
 ---
 ul
   - blog.articles.group_by {|a| a.date.year }.each do |year, articles|

@@ -1,0 +1,7 @@
+h5 Last blog posts
+.footer-links
+  ul
+    - blog.articles[0..4].each do |article|
+      li
+        = link_to article.title, article.url
+        .meta= article.data.summary
