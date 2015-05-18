@@ -200,7 +200,6 @@ blockquote {
 }
 
 
-
 video#bgvid {
     position: fixed; right: 0; bottom: 0;
     min-width: 100%; min-height: 100%;
@@ -214,3 +213,41 @@ video#bgvid {
 
 /* body { background: url(polina.jpg) #000 no-repeat center center fixed; } */
 /* } */
+
+// Series navigation
+//
+#series-nav {
+    small {
+        color: white;
+    }
+    .series-link h3 {
+        display: inline-block;
+        line-height: 2em;
+        width: 2em;
+        border: 1px solid white;
+        margin-left: 1ex;
+        border-radius: 50%;
+        vertical-align:middle;
+        background: transparent;
+        text-align: center;
+        color: white;
+        &.active {
+            background-color: white;
+            color: black;
+        }
+    }
+    &.series-nav-light-bg {
+        small { color: #666; };
+        h2 {
+            color: #666;
+        }
+        .series-link h3 {
+            color: #666;
+            border-color: #666;
+            &.active {
+                background-color: #666;
+                color: white;
+        }
+        }
+    }
+}

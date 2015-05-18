@@ -49,6 +49,14 @@ helpers do
   # Layout helpers
   #
 
+  def with_series(series)
+    all_with_series.find_all { |art| art.data.series == series }
+  end
+
+  def all_with_series
+    blog.articles.find_all {|x| x.data.has_key? 'series' }
+  end
+
   def default_filters
     ["sepia-40", "vignette-90"]
   end

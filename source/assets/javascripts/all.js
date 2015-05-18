@@ -18,6 +18,8 @@ $(document).ready(function() {
         latency: 500
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
 	$(".fancybox")
         .attr('rel', 'gallery')
         .fancybox({

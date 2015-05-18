@@ -1,0 +1,6 @@
+- series = data.page.series
+- if series
+  center#series-nav class="#{locals[:position] == :bottom ? "series-nav-light-bg" : ""}"
+    h2 <small>Цикл</small> «#{series}»
+    - with_series(series).reverse.each_with_index do |art,idx|
+      = partial :series_link, locals: {article: art, index: idx }
