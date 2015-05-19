@@ -21,7 +21,6 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 
 	$(".fancybox")
-        .attr('rel', 'gallery')
         .fancybox({
             padding    : 5,
             margin     : 0,

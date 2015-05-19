@@ -9,13 +9,15 @@
 - else [5,5]
 - idx = 0
 
+- gallery_id = (0..16).to_a.map{|a| rand(16).to_s(16)}.join
+
 .card style="position: relative;"
   table.gallery border=0
     - grid_h.times do
       tr.gallery-row
         - grid_w.times do
           td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path images[idx]}); "
-            = link_to "", post_image_path(images[idx]), class: "fancybox"
+            = link_to "", post_image_path(images[idx]), class: "fancybox", rel: gallery_id
           - idx += 1
   .gallery-text-box
     = yield rescue ''
