@@ -49,7 +49,6 @@ helpers do
   #
   # Layout helpers
   #
-
   def with_series(series)
     all_with_series.find_all { |art| art.data.series == series }
   end
