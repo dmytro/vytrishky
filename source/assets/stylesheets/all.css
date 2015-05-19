@@ -2,7 +2,7 @@
 
 *= require bootstrap.min
 *= require material
-*= require clean-blog.min
+*= require clean-blog
 *= require fonts
 *= require jquery.fancybox
 *= require fancybox-override
