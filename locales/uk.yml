@@ -1,0 +1,12 @@
+---
+uk:
+  paging:
+    page: Сторінка
+    of: з
+    next: Далі
+    prev: Назад
+  tags:
+    pages_tagged: Статті з відміткою
+  calendar:
+    year: "%{year} рік"
+    for: за

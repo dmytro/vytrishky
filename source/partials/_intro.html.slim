@@ -5,12 +5,12 @@
 - filters = data.page.intro.filters || defaults rescue defaults
 - image = data.page.intro.image rescue ""
 
-header.intro-header.snap[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
+header.intro-header.snap.shadow-z-5[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
   .container
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
         .post-heading
           h1= @title || data.page.title
-          h2.subheading= data.page.summary
+          h2.subheading= @subtitle || data.page.summary
           span.meta= data.page.intro.text || data.page.description rescue data.page.description
           = partial :series_nav

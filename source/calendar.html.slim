@@ -8,32 +8,24 @@ intro:
 - date = case page_type
 - when 'day'; then Date.new(year, month, day).strftime('%b %e %Y')
 - when 'month'; then Date.new(year, month, 1).strftime('%b %Y')
-- when 'year'; then year
+- when 'year'; then t("calendar.year", year: year)
 
-- @title = "#{data.page.title}: #{date.to_s}"
+- @title = "#{data.page.title} #{t "calendar.for"} #{date.to_s}"
+- @next_page = next_page
+- @prev_page = prev_page
+- @subtitle = capture
+  - if paginate && num_pages > 1
+    h2
+      = partial :page_prev
+      = t "paging.page"
+      =<> page_number
+      = t "paging.of"
+      =<> num_pages
+      = partial :page_next
 
-.container-fluid.well
-  .col-sm-4
-      - if prev_page
-        = link_to '<< Назад', prev_page
-      - else
-        | << Назад
-  .col-sm-4
-    - if paginate && num_pages > 1
-        | Сторінка
-        =<> page_number
-        |  з
-        =<> num_pages
-  .col-sm-4
-    - if paginate
-      - if next_page
-      = link_to 'Далі >>', next_page
-    - else
-      | Далі >>
-
-  .col-sm-12
-    ul
-      - page_articles.reverse.each_with_index do |article, i|
-        li
-          = link_to article.title, article
-          span=<> article.date.strftime('%b %e')
+.container
+  ul
+    - page_articles.reverse.each_with_index do |article, i|
+      li
+        = link_to article.title, article
+        span=<> article.date.strftime('%b %e')

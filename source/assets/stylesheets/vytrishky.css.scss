@@ -61,6 +61,17 @@
 
 .intro-header {
     position: relative;
+    h2 {
+        i.disabled {
+            color: #666;
+        }
+        a {
+            color: white;
+            &:hover {
+                color: #337ab7;
+            }
+        }
+    }
 }
 .chapter-divider {
     margin-top: 5ex;
