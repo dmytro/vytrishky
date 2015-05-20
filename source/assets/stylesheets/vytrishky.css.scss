@@ -296,7 +296,13 @@ video#bgvid {
             text-indent: 3ex;
         }
     }
-
+    i.fa.fa-small {
+        line-height: inherit;
+        vertical-align: middle;
+        color: #ddd;
+        margin-right: 10px;
+        font-size: 80%;
+    }
     a {
         margin-right: 1ex;
         font-size: 85%;
