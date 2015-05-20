@@ -1,0 +1,6 @@
+- @subtitle = capture
+  #year-nav
+    | По роках
+    h4
+      - blog.articles.map {|a| a.date.year }.uniq.each do |year|
+        = link_to year.to_s, "/#{year}.html"
