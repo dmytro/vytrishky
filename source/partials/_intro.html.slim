@@ -14,3 +14,4 @@ header.intro-header.snap.shadow-z-5[style="background-image: url('#{post_image_p
           h2.subheading= @subtitle || data.page.summary
           span.meta= data.page.intro.text || data.page.description rescue data.page.description
           = partial :series_nav
+          = partial :current_page_tags

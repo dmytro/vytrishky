@@ -57,10 +57,37 @@ helpers do
     all_with_series.find_all { |art| art.data.series == series }
   end
 
+  def tag_cloud
+    size_min, size_max = 12.0, 30.0
+
+    counts = blog.tags.map do |tag, posts|
+      [tag, posts.count]
+    end
+
+    min, max = counts.map(&:last).minmax
+
+    weight = counts.map do |name, count|
+      # logarithmic distribution
+      weight = (Math.log(count) - Math.log(min))/(Math.log(max) - Math.log(min))
+      [name, weight]
+    end
+
+    weight.sort_by! { rand }
+
+    weight.map do |tag|
+      name, weight = tag
+      size = size_min + ((size_max - size_min) * weight).to_f
+      [name, size]
+    end
+  end
+
+  # Find all articles that have `series` in YAML frontmatter with the
+  # same value as in the current article.
   def all_with_series
     blog.articles.find_all {|x| x.data.has_key? 'series' }
   end
 
+  # CSS filters applied to images in dividers and intro.
   def default_filters
     ["sepia-40", "vignette-90"]
   end

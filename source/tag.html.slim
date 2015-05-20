@@ -4,8 +4,8 @@ pageable: true
 per_page: 10
 ---
 - @title = capture
-  h1= t "tags.pages_tagged"
-    =< tagname
+  h1 #{t("tags.pages_tagged")} #{tagname}
+
 - @next_page = next_page
 - @prev_page = prev_page
 - @subtitle = capture

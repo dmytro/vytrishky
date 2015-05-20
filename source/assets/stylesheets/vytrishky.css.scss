@@ -263,7 +263,29 @@ video#bgvid {
     }
 }
 
+.current-page-tags {
+    i {
+        padding: 2ex;
+    }
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    a {
+        color: white;
+        font-size: 80%;
+        &:not(:last-child) {
+            &:after {
+                content: "|";
+                padding: 1ex;
+            }
+        }
+    }
+
+}
 .footer-links  {
+    i.fa.fa-2x {
+        color: rgb(64,64,64);
+    }
     li {
         list-style: none;
         .meta {
