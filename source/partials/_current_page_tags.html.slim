@@ -1,0 +1,6 @@
+- if current_page.respond_to?(:tags)
+  center.current-page-tags
+    = link_to "#tags"
+      i.fa.fa-lg.fa-tags data-toggle="tooltip" title="#{t("tags.see_all")}"
+    - current_page.tags.each do |tag|
+      = link_to tag, tag_path(tag)
