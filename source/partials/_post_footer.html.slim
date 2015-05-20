@@ -3,6 +3,14 @@ p
 .container.well
   .row
     .col-md-5
+      .row.text-center
+        h1
+          i.fa.fa-book
+      .row
       = partial :previous_posts
     #tags.col-md-5.col-md-offset-1
-      = partial :tags
+      .row.text-center
+        h1
+          i.fa.fa-tags
+      .row
+        = partial :tags
