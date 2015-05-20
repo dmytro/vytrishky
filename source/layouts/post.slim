@@ -3,3 +3,9 @@
   article
     = yield
   = partial :post_footer
+
+  - if !development?
+    = chapter do
+      h4 Коментарі
+      = disqus
+      = disqus_count

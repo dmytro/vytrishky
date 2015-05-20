@@ -18,6 +18,10 @@ activate :livereload
 activate :directory_indexes
 activate :i18n, langs: [:uk, :en]
 
+activate :disqus do |d|
+  d.shortname = 'vytrishky'
+end
+
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
