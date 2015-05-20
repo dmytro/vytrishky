@@ -1,3 +1,4 @@
+@import "fonts.css.scss";
 
 
 //
@@ -61,6 +62,7 @@
 
 .intro-header {
     position: relative;
+    font-family: $caviar;
     h2 {
         i.disabled {
             color: #666;
@@ -74,6 +76,7 @@
     }
 }
 .chapter-divider {
+    font-family: $caviar;
     margin-top: 5ex;
     padding-top: 5em;
     padding-bottom: 5em;
