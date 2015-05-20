@@ -266,6 +266,21 @@ video#bgvid {
     }
 }
 
+#year-nav {
+    a {
+        display: inline-block;
+        line-height: 3.9em;
+        width: 4em;
+        border: 3px solid white;
+        margin-left: 1ex;
+        border-radius: 50%;
+        vertical-align:middle;
+        background: transparent;
+        text-align: center;
+        color: white;
+    }
+}
+
 .current-page-tags {
     i {
         padding: 2ex;

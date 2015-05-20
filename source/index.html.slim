@@ -1,18 +1,25 @@
 ---
 pageable: true
 layout: simple
+per_page: 5
 intro:
   image: backgrounds/index.jpg
   filters:
     - vignette-90
-title: Індекс статей за роками
+title: Всі статті
 ---
-ul
+= partial :by_year
+ul.list-unstyled
   - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
     li
-      h5= year
+      h1= year
       ul
         - articles.each do |article|
           li
             a href="#{article.url}"
               = article.title
+              - unless article.data.series.nil?
+                span.small
+                  | &nbsp;(З циклу &laquo;
+                  = article.data.series
+                  |&raquo;)

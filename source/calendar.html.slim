@@ -22,6 +22,11 @@ intro:
       = t "paging.of"
       =<> num_pages
       = partial :page_next
+  #year-nav
+    | Інші роки
+    h5
+      - blog.articles.map {|a| a.date.year }.uniq.each do |year|
+        = link_to year.to_s, "/#{year}.html"
 
 .container
   ul
