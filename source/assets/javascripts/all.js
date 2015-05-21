@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     $(document).scrollsnap({
         snaps: '.snap',
-        proximity: 200,
+        proximity: 100,
         latency: 500
     });
 
