@@ -56,6 +56,17 @@
 .vignette-100 { @include vignette(.5,   1) }
 .vignette   { @include vignette(.5,   1) }
 
+.text-on-dark {
+    p {
+        padding: 1em;
+        background-image: radial-gradient(
+                                  ellipse ,
+                                  rgba(0,0,0,1), rgba(0,0,0,.1)
+                              );
+
+    }
+}
+
 // ------------------------------------------------------------------
 
 // blur
