@@ -14,8 +14,8 @@ $(document).ready(function() {
 
     $(document).scrollsnap({
         snaps: '.snap',
-        proximity: 100,
-        latency: 500
+        proximity: 200,
+        latency: 1000
     });
 
     $('[data-toggle="tooltip"]').tooltip();
