@@ -2,7 +2,7 @@
 language: ukrainian
 layout: post
 intro:
-  image: "tsuruno_onsen05.jpg"
+  image: "tsuruno_onsen26.jpg"
 images:
   basepath: vidpustka_13/tsuruno_onsen
 title: "Екстремальна екзотика в Цуруно онсен"
@@ -18,6 +18,7 @@ tags:
   - onsen
   - Hachimantai
   - auto-camp
+  - wetland
 published: true
 summary: |
   „Уже сьогодні середа…“ тож нема чого засиджуватися, вирушаємо в дорогу.
@@ -74,6 +75,9 @@ description: |
 
     В розмовах з прислужником і деякими тітоньками, вияснилося, що одна з сьогоднішніх відвідувачок була в цьому ж самому рьокані з яких кілька десятків років тому, коли ще й електрики тут не було. Але, в той же час, і її кімната і кімнати номер залишилися, як були ще тоді.
 
+  = pull_left photo(%w{tsuruno_onsen48.jpg tsuruno_onsen47.jpg }, layout: :portrait),8 do
+    p Ліворуч - пожежний дзвін. А осучаснена версія хатки на курячих лапках - телефонна будка
+
 = divider "tsuruno_onsen40.jpg", filters: ["vignette"] do
   markdown:
     ## Порічки ростуть по річці
@@ -84,8 +88,6 @@ description: |
   = gallery %w{tsuruno_onsen38.jpg tsuruno_onsen39.jpg tsuruno_onsen40.jpg tsuruno_onsen41.jpg tsuruno_onsen42.jpg tsuruno_onsen43.jpg tsuruno_onsen44.jpg tsuruno_onsen46.jpg } do
     p Порічки, як і повинно бути, ростуть по річці...
 
-  = photo %w{tsuruno_onsen47.jpg tsuruno_onsen48.jpg}, layout: :portrait do
-    p Ліворуч - пожежний дзвін. А осучаснена версія хатки на курячих лапках - телефонна будка
 
 = divider "tsuruno_onsen24.jpg" do
   h1 Ротембуро
@@ -93,19 +95,24 @@ description: |
   p Перейшовши річеку мостиком, знаходимо онсени поділені на кілька відділів. Ще коли дівчинка-ексурсовод розповідала про Цуруно-ю, вона не забула згадати, про те, що тут є ванни відкриті і для чоловіків, і жінок. Власне всі ванни крім однієї – розділені, окремо для чоловіків і окремо для жінок. Але найбільша &mdash; спільна. Чоловіки роздягаються прямо тут, на березі річки, надворі, під невеликим навісом з дощок, а для жінок &mdash;&nbsp;трохи поодаль окрема роздягальня і двері, що ведуть від роздягальні до спільної ванни.
 
 = chapter do
-  = gallery %w{tsuruno_onsen22.jpg tsuruno_onsen23.jpg tsuruno_onsen24.jpg tsuruno_onsen25.jpg tsuruno_onsen45.jpg tsuruno_onsen26.jpg tsuruno_onsen28.jpg tsuruno_onsen29.jpg  tsuruno_onsen30.jpg tsuruno_onsen31.jpg tsuruno_onsen27.jpg tsuruno_onsen32.jpg  tsuruno_onsen33.jpg tsuruno_onsen34.jpg tsuruno_onsen35.jpg tsuruno_onsen36.jpg tsuruno_onsen37.jpg} do
+  = gallery %w{tsuruno_onsen22.jpg tsuruno_onsen23.jpg tsuruno_onsen24.jpg tsuruno_onsen25.jpg tsuruno_onsen45.jpg tsuruno_onsen26.jpg tsuruno_onsen28.jpg   tsuruno_onsen30.jpg tsuruno_onsen31.jpg tsuruno_onsen27.jpg  tsuruno_onsen34.jpg tsuruno_onsen35.jpg tsuruno_onsen36.jpg tsuruno_onsen37.jpg} do
+
+  .row
+    br
+  = pull_left gallery(%w{tsuruno_onsen29.jpg tsuruno_onsen32.jpg  tsuruno_onsen33.jpg}), 8 do
     p В жіночій частині ротембуро встановлена велика чоловіча гордість.  А чоловіча роздягалка &mdash; просто на стежці поміж річкою і ванною.
 
+= divider "obayachi_wetland4.jpg" do
   h1 Їдемо далі
 
-= chapter do
-  markdown:
-    # Високогірне болото
 
-    По дорозі зупинилися для прогулянки болотом. По болоту прокладений 700 метровий маршрут, по простеленим дошкам. Як пояснює табличка поруч ці болота &mdash; на вулканічному попелі, через це вода не може просочуватися вглиб, і тому утворюютья болота. Поруч з болотом &mdash; підтвердження того, що це правда. Величезна гора вулканічного попелу.
+  h2 Високогірне болото
 
-  = gallery %w{obayachi_wetland1.jpg obayachi_wetland2.jpg obayachi_wetland3.jpg obayachi_wetland4.jpg obayachi_wetland5.jpg obayachi_wetland6.jpg}
+  = pull_right(gallery(%w{obayachi_wetland1.jpg obayachi_wetland4.jpg obayachi_wetland2.jpg obayachi_wetland3.jpg  obayachi_wetland5.jpg obayachi_wetland6.jpg})) do
 
+    p По дорозі зупинилися для прогулянки болотом. По болоту прокладений 700 метровий маршрут, по простеленим дошкам. Як пояснює табличка поруч ці болота &mdash; на вулканічному попелі, через це вода не може просочуватися вглиб, і тому утворюютья болота. Поруч з болотом &mdash; підтвердження того, що це правда. Величезна гора вулканічного попелу.
+
+= chapter
   markdown:
     ## Гейзери
 
