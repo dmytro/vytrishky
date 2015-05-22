@@ -93,16 +93,14 @@ helpers do
   end
 
   def photo(pictures, filters: default_filters, layout: :landscape, &block)
-    partial :photo, locals: {pictures: pictures, filters: filters, layout: layout} do
+    partial_name = Array(pictures).count == 1 ? :photo : :photos3
+    partial partial_name, locals: {pictures: pictures, filters: filters, layout: layout} do
       block_given? ? yield : ""
     end
   end
 
-  def photos3(pictures, **params, &block)
-    partial :photos3, locals: {pictures: Array(pictures)}.merge(**params) do
-      block_given? ? yield : ""
-    end
-  end
+  alias :photos3 :photo
+
 
   def gallery(pictures, **params, &block)
     partial :gallery, locals: { pictures: Array(pictures) }.merge(**params) do
