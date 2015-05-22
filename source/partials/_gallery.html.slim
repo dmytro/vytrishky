@@ -1,5 +1,5 @@
-- (grid_h, grid_w) = case images.count
-- when 2,3,5; then [1,images.count]
+- (grid_h, grid_w) = case pictures.count
+- when 1,2,3,5; then [1,pictures.count]
 - when 4; then [2,2]
 - when 6..8; then [2,3]
 - when 9..15; then [3,3]
@@ -16,8 +16,8 @@
     - grid_h.times do
       tr.gallery-row
         - grid_w.times do
-          td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path images[idx]}); "
-            = link_to "", post_image_path(images[idx]), class: "fancybox", rel: gallery_id
+          td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path pictures[idx]}); "
+            = link_to "", post_image_path(pictures[idx]), class: "fancybox", rel: gallery_id
           - idx += 1
   .gallery-text-box
     = yield rescue ''

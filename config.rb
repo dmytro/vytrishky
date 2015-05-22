@@ -92,14 +92,20 @@ helpers do
     ["sepia-40", "vignette-90"]
   end
 
-  def photo(image, filters: default_filters, layout: :landscape, &block)
-    partial :photo, locals: {image: image, filters: filters, layout: layout} do
+  def photo(pictures, filters: default_filters, layout: :landscape, &block)
+    partial :photo, locals: {pictures: pictures, filters: filters, layout: layout} do
       block_given? ? yield : ""
     end
   end
 
-  def photos3(images, **params, &block)
-    partial :photos3, locals: {images: images}.merge(**params) do
+  def photos3(pictures, **params, &block)
+    partial :photos3, locals: {pictures: Array(pictures)}.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
+
+  def gallery(pictures, **params, &block)
+    partial :gallery, locals: { pictures: Array(pictures) }.merge(**params) do
       block_given? ? yield : ""
     end
   end
@@ -116,20 +122,15 @@ helpers do
     end
   end
 
-  def gallery(images, **params, &block)
-    partial :gallery, locals: { images: images }.merge(**params) do
+
+  def pull_left(pictures, **params)
+    partial :pull_left, locals: { pictures: pictures}.merge(**params) do
       block_given? ? yield : ""
     end
   end
 
-  def pull_left(image, **params)
-    partial :pull_left, locals: { image: image}.merge(**params) do
-      block_given? ? yield : ""
-    end
-  end
-
-  def pull_right(image, **params)
-    partial :pull_right, locals: { image: image}.merge(**params) do
+  def pull_right(pictures, **params)
+    partial :pull_right, locals: { pictures: pictures}.merge(**params) do
       block_given? ? yield : ""
     end
   end
