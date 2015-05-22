@@ -20,4 +20,5 @@
             = link_to "", post_image_path(pictures[idx]), class: "fancybox", rel: gallery_id
           - idx += 1
   .gallery-text-box
-    = yield rescue ''
+    .container
+      = yield rescue ''
