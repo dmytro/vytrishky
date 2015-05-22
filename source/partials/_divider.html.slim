@@ -1,10 +1,10 @@
 - filters = locals[:filters] || ["sepia-40", "vignette-90"]
 - tall = locals[:panorama] ? "" : 'chapter-divider-tall'
 .intro-header.shadow-z-5.chapter-divider.snap[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")} " class="#{tall}"]
+  - if locals[:video]
+    = partial :video, locals: locals
   .container
     .row
-      - if locals[:video]
-        = partial :video, locals: locals
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
         .chapter
           = yield
