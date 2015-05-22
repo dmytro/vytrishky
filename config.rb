@@ -122,15 +122,19 @@ helpers do
     end
   end
 
-
-  def pull_left(pictures, **params)
-    partial :pull_left, locals: { pictures: pictures}.merge(**params) do
+  def pull_left(content, left_column=4, **params)
+    partial :pull_left, locals: { content: content}
+      .merge({left_column: left_column, right_column: (12 - left_column)})
+      .merge(**params) do
       block_given? ? yield : ""
     end
   end
 
-  def pull_right(pictures, **params)
-    partial :pull_right, locals: { pictures: pictures}.merge(**params) do
+
+  def pull_right(content, right_column=4, **params)
+    partial :pull_right, locals: { content: content}
+      .merge({right_column: right_column, left_column: (12 - right_column)})
+      .merge(**params) do
       block_given? ? yield : ""
     end
   end

@@ -1,6 +1,7 @@
 .row
-  .col-sm-8
+  div class="col-sm-#{left_column}"
     = yield
-  .col-sm-4
-    = partial :photo, locals: locals do
-      |
+    |
+  div class="col-sm-#{right_column}"
+    = content
+br
