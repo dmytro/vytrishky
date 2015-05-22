@@ -17,7 +17,11 @@ $(document).ready(function() {
         proximity: 200,
         latency: 1000
     });
-
+    $('video').on('ended', function () {
+        console.log("END");
+        this.load();
+        this.play();
+    });
     $('[data-toggle="tooltip"]').tooltip();
 
 	$(".fancybox")
