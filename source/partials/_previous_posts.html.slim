@@ -1,8 +1,0 @@
-
-.footer-links
-  ul
-    - blog.articles[0..4].each do |article|
-      li
-        i.fa.fa-sm.fa-pencil.fa-small
-        = link_to article.title, article.url
-        .meta= article.data.summary
