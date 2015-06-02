@@ -1,4 +1,5 @@
 - filters = locals[:filters] || ["sepia-40", "vignette-90"]
+- filters = filters + Array(locals[:filters_plus])
 - tall = locals[:panorama] ? "" : 'chapter-divider-tall'
 .intro-header.shadow-z-5.chapter-divider.snap[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")} " class="#{tall}"]
   - if locals[:video]
