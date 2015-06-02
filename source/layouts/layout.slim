@@ -25,8 +25,9 @@ html[lang="en"]
 
       ga('create', 'UA-33505287-6', 'auto');
       ga('send', 'pageview');
-
+    = partial "gplus_include"
   body
+    = partial "fb_include"
     = partial :nav
     = yield
     = partial :footer
