@@ -1,6 +1,6 @@
 ---
 title: Витрішки
-summary: Блог про або-що, але не про роботу
+summary: Блог про що завгодно, тільки не про роботу
 layout: simple
 intro:
   image: backgrounds/about.jpg
