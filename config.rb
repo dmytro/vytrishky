@@ -181,23 +181,6 @@ helpers do
     end
   end
 
-  def image_caption(image, text)
-    %{<figure>
-      #{image_tag image}
-      <figcaption> #{text} </figcaption>
-   </figure>}
-  end
-
-  def page_active?(urls)
-    Array(urls).each do |url|
-      return true if current_page.url.split("/").last == url.split("/").last
-    end
-    false
-  end
-
-  def active_class(url)
-    "active" if page_active?(url)
-  end
 
 end
 

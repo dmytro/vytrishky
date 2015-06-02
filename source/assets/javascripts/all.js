@@ -18,7 +18,7 @@ $(document).ready(function() {
         latency: 1000
     });
     $('video').on('ended', function () {
-        console.log("END");
+        // console.log("END");
         this.load();
         this.play();
     });
