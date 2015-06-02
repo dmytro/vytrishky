@@ -63,6 +63,10 @@
                               );
     }
 }
+
+.text-shadow {
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;;
+}
 // ------------------------------------------------------------------
 .intro-header {
     position: relative;
@@ -123,6 +127,7 @@ blockquote {
 .photo-wrapper {
     padding-bottom: 75%;
     position: relative;
+    margin-bottom: 1ex;
     &.photo-portrait {
         padding-bottom: 150%;
         > .card {
@@ -137,7 +142,7 @@ blockquote {
         height: 100%;
         background-size: contain;
         margin-bottom: 20px;
-        background-position: center top;
+        background-position: center center;
         background-repeat: no-repeat;
         padding-bottom: 75%;
         .card-image {
@@ -147,7 +152,7 @@ blockquote {
             position: absolute;
             top: 0; bottom: 20%; left: 0; right: 0;
             background-size: cover;
-            background-position: center top;
+            background-position: center center;
             background-repeat: no-repeat;
         }
         .card-text {
@@ -162,6 +167,11 @@ blockquote {
             }
             font-size: 85%;
             overflow: auto;
+            height: 30%;
+            overflow: auto;
+            p {
+                margin: 0;
+            }
         }
     }
 }
@@ -177,8 +187,13 @@ blockquote {
                 bottom: 0;
             }
             font-size: 85%;
+            height: 20%;
             overflow: auto;
             .container {
+                p {
+                    margin: 0;
+                }
+                padding: 0;
                 width: 100%;
             }
 }
