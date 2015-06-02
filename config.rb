@@ -250,7 +250,7 @@ configure :build do
     html.preserve_line_breaks       = false  # Preserve line breaks
     html.simple_boolean_attributes  = true   # Use simple boolean attributes
   end
-  activate :asset_hash
+  activate :asset_hash, :ignore => [/fonts/]
   activate :gzip
   ignore '*.less'
   ignore(/Icon\r$/)
