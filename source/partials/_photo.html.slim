@@ -1,9 +1,10 @@
 - layout = locals[:layout] ? layout : ""
 - url = post_image_path(pictures)
+- position = locals[:position] ? "background-position: #{position};" : ""
 
 .photo-wrapper[class="photo-#{layout}"]
   .card
-    .card-image style="background-image: url('#{url}')"
+    .card-image style="background-image: url('#{url}'); #{position}"
       = link_to "", url, class: "fancybox", rel: "#{locals[:rel] ? rel : rand(1000)}"
     .card-text
       = yield

@@ -92,9 +92,9 @@ helpers do
     ["sepia-40", "vignette-90"]
   end
 
-  def photo(pictures, filters: default_filters, layout: :landscape, &block)
+  def photo(pictures, filters: default_filters, layout: :landscape, position: nil, &block)
     partial_name = Array(pictures).count == 1 ? :photo : :photos3
-    partial partial_name, locals: {pictures: pictures, filters: filters, layout: layout} do
+    partial partial_name, locals: {pictures: pictures, filters: filters, layout: layout, position: position} do
       block_given? ? yield : ""
     end
   end
