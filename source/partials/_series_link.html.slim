@@ -1,3 +1,3 @@
 span.series-link
-  a href="#{article.url}"
+  = link_to article
     h3.shadow-z-2[class="#{current_page.url == article.url ? 'active' : ''}" data-toggle="tooltip" title="#{article.title}"]= index+1
