@@ -320,6 +320,12 @@ video#bgvid {
         text-align: center;
         color: white;
     }
+    &.year-nav-index {
+        a {
+            color: #666;
+            border-color: #666;
+        }
+    }
 }
 
 .current-page-tags {
