@@ -16,6 +16,7 @@ html[lang="en"]
     meta property="og:type" content="website"
     - if data.page.intro.image
       link rel="image_src" href="#{post_image_path data.page.intro.image}"
+      meta property="og:image" content="#{post_image_path data.page.intro.image}"
     meta property="og:url" content="#{data.site.author.gh_page}#{base}/#{current_page.url}"
     meta property="og:locale" content="uk_UA"
     meta property="og:site_name" content="#{data.site.title} | #{data.site.description}"
