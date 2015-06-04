@@ -12,6 +12,16 @@ html[lang="en"]
     meta[name="keywords" content="#{Array(data.page.tags).join(",")}"]
     meta[name="author" content="#{data.site.author.name }"]
 
+    meta property="og:title" content="#{data.site.title}"
+    meta property="og:type" content="website"
+    - if data.page.intro.image
+      link rel="image_src" href="#{image_path data.page.intro.image}"
+    meta property="og:url" content="#{data.site.author.gh_page}#{base}/#{current_page.path}"
+    meta property="og:locale" content="uk_UA"
+    meta property="og:site_name" content="#{data.site.title} | #{data.site.description}"
+    meta property="og:admins" content="#{data.site.author.facebook_id }"
+
+
     link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
 
     = stylesheet_link_tag "all.css"
