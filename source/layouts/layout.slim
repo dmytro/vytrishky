@@ -13,11 +13,11 @@ html[lang="en"]
     meta[name="author" content="#{data.site.author.name }"]
 
     meta property="og:title" content="#{data.site.title}"
-    meta property="og:type" content="ukrainian"
+    meta property="og:type" content="website"
     - if data.page.intro.image
       meta property="og:image" content="#{image_path data.page.intro.image}"
       link rel="image_src" href="#{image_path data.page.intro.image}"
-    meta property="og:url" content="http://#{base}#{current_page.path}"
+    meta property="og:url" content="http://#{base}/#{current_page.path}"
     meta property="og:site_name" content="#{data.site.title} | #{data.site.description}"
     meta property="og:admins" content="#{data.site.author.facebook }"
 
