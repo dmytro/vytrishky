@@ -85,8 +85,12 @@ helpers do
   # unless it's full http://.... format. Local relative libks are not
   # accepted.
   def og_image_path
-    a = post_image_path(data.page.intro.image).sub(/^(.*)\/assets\/images\/.*$/, '')
-    "#{data.site.base_url}/#{a}"
+    a = data.page.intro.image
+    b = post_image_path(a)
+    c = b.sub(/^(.*)(\/assets\/images\/.*)$/, '\2')
+      .gsub(/\/+/, '/')
+      .sub(/\/*/,'')
+    "#{data.site.base_url}/#{c}"
   end
 
   # Find all articles that have `series` in YAML frontmatter with the
