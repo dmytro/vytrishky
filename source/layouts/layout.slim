@@ -7,18 +7,27 @@ html[lang="en"]
 
     link type="image/png" href="favicon.png" rel="icon"
 
-    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
-    meta[name="description" content="#{data.site.title} | #{data.site.description} | #{data.page.series} #{data.page.title} #{data.page.description}"]
-    meta[name="keywords" content="#{Array(data.page.tags).join(",")}"]
-    meta[name="author" content="#{data.site.author.name }"]
+    - description = capture do
+      => [ data.page.title, data.page.description, data.site.title, data.site.description].compact.join(" | ").strip
+      - if data.page.series
+        | З циклу #{data.page.series}
+
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="description" content="#{description}"
+    meta name="keywords" content="#{Array(data.page.tags).join(",")}"
+    meta name="author" content="#{data.site.author.name }"
 
     meta property="og:title" content="#{data.site.title}"
+    meta property="og:description" content="#{description}"
     meta property="og:type" content="website"
+
     - if data.page.intro.image
-      link rel="image_src" href="#{post_image_path data.page.intro.image}"
-    meta property="og:url" content="#{data.site.author.gh_page}#{base}/#{current_page.url}"
+      link rel="image_src" href="#{og_image_path}"
+      meta property="og:image" content="#{og_image_path}"
+
+    meta property="og:url" content="#{data.site.base_url}#{current_page.url}"
     meta property="og:locale" content="uk_UA"
-    meta property="og:site_name" content="#{data.site.title} | #{data.site.description}"
+    meta property="og:site_name" content="#{data.site.title}"
     meta property="fb:admins" content="#{data.site.author.facebook_id }"
 
 

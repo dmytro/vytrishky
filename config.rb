@@ -81,6 +81,14 @@ helpers do
     end
   end
 
+  # Facebook fails to parse Open Graph page image url tag og:image
+  # unless it's full http://.... format. Local relative libks are not
+  # accepted.
+  def og_image_path
+    a = post_image_path(data.page.intro.image).sub(/^(.*)\/assets\/images\/.*$/, '')
+    "#{data.site.base_url}/#{a}"
+  end
+
   # Find all articles that have `series` in YAML frontmatter with the
   # same value as in the current article.
   def all_with_series
