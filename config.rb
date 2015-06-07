@@ -113,7 +113,6 @@ helpers do
 
   alias :photos3 :photo
 
-
   def gallery(pictures, **params, &block)
     partial :gallery, locals: { pictures: Array(pictures) }.merge(**params) do
       block_given? ? yield : ""
@@ -149,6 +148,11 @@ helpers do
     end
   end
 
+  def google_map(url, **params)
+    partial :google_map, locals: { url: url }.merge(**params) do
+      block_given? ? yield : ""
+    end
+  end
   # Shorten img file list.
   # Convert list of %w{11 22 33} -> ["IMG_11.jpg", ...]
   def imgs(list)
