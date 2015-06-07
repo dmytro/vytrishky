@@ -26,6 +26,35 @@
 }
 
 // ------------------------------------------------------------------
+// Matte
+// ------------------------------------------------------------------
+@mixin matte ($opacity1,$opacity2) {
+    &:before {
+        position: absolute;
+        top: 0;　left: 0; //right: 0; bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: radial-gradient(
+                                  ellipse ,
+                                  rgba(255,255,255,$opacity1), rgba(255,255,255,$opacity2)
+                              );
+    }
+
+}
+.matte-10 { @include matte(0,    .1) }
+.matte-20 { @include matte(0,    .2) }
+.matte-30 { @include matte(.05,  .3) }
+.matte-40 { @include matte(.05,  .4) }
+.matte-50 { @include matte(.07,  .5) }
+.matte-60 { @include matte(.07,  .6) }
+.matte-70 { @include matte(.1,   .7) }
+.matte-80 { @include matte(.1,   .8) }
+.matte-90 { @include matte(.1,   .9) }
+.matte-100 { @include matte(.5,   1) }
+.matte   { @include matte(.5,   1) }
+
+// ------------------------------------------------------------------
 // Vignette
 // ------------------------------------------------------------------
 @mixin vignette ($opacity1,$opacity2) {
@@ -55,7 +84,7 @@
 .vignette   { @include vignette(.5,   1) }
 
 .text-on-dark {
-    p {
+    p, h2.subheading {
         padding: 1em;
         background-image: radial-gradient(
                                   ellipse ,
@@ -65,7 +94,7 @@
 }
 
 .text-shadow {
-    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;;
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
 }
 // ------------------------------------------------------------------
 .intro-header {
@@ -199,6 +228,17 @@ blockquote {
 }
 
 .card {
+    &.google-map {
+        padding: 7px;
+        position: relative;
+        > a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
     &.card-light-shadow {
         box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.33), 8px 8px 15px rgba(255, 255, 255, 0.15), ;
     }
@@ -246,18 +286,17 @@ blockquote {
 video#bgvid {
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    /* min-width: 100%; */
+    /* min-height: 100%; */
     width: auto;
-    height: auto;
-    z-index: -100;
+    height: auto;;
+    overflow: hidden;
+    /* z-index: -100; */
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    /* width: auto; */
+    /* height: auto; */
     z-index: -100;
     background-repeat: no-repeat;
     background-size: cover;
@@ -285,6 +324,7 @@ video#bgvid {
         vertical-align:middle;
         background: transparent;
         text-align: center;
+        text-shadow: none;
         color: white;
         &.active {
             background-color: white;
@@ -383,4 +423,13 @@ video#bgvid {
     position: absolute;
     top: 3em;
     right: 0;
+}
+
+.footnotes {
+    border-top: 1px solid #ccc;
+    p {
+        font-style: italic;
+        font-size: 90%;
+        padding-left: 5ex;
+    }
 }
