@@ -1,19 +1,19 @@
-- filters = locals[:filters] || ["sepia-40", "vignette-90"]
-- filters = filters + Array(locals[:filters_plus])
-- position = locals[:position] ? "background-position: #{position};"  : ""
-- tall = locals[:panorama] ? "" : 'chapter-divider-tall'
+- filters = (locals[:filters] || default_filters) + Array(locals[:filters_plus])
 
-- content = capture
+- filters << 'chapter-divider-tall' unless locals[:panorama]
+
+- filters << 'snap' unless locals[:intro]
+
+- position = locals[:position] ? "background-position: #{position};"  : ""
+
+- unless locals[:video]
+  - style = "background-image: url('#{post_image_path image}'); #{position}"
+
+.intro-header.shadow-z-5 class="#{Array(filters).join(" ")}" style="#{style}"
   .container
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-        .chapter
+        div class="#{locals[:intro] ? "post-heading" : "chapter"}"
+          - if locals[:video]
+            = partial :video, locals: locals
           = yield
-
-- if locals[:video]
-  .intro-header.shadow-z-5.chapter-divider.snap[class="#{Array(filters).join(" ")} " class="#{tall}"]
-    = partial :video, locals: locals.merge(filters: filters)
-    = content
-- else
-    .intro-header.shadow-z-5.chapter-divider.snap[style="background-image: url('#{post_image_path image}'); #{position}" class="#{Array(filters).join(" ")} " class="#{tall}"]
-      = content

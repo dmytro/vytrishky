@@ -1,18 +1,7 @@
-/ - if locals[:title_video]
-/   = partial :video, locals: {video: :title_video, image: background}
-/ - else
-- defaults = ["sepia-40", "vignette-90"]
-- filters = data.page.intro.filters || defaults rescue defaults
-- image = data.page.intro.image rescue ""
-
-header.intro-header.snap.shadow-z-5[style="background-image: url('#{post_image_path image}')" class="#{Array(filters).join(" ")}"]
-  = partial "social_buttons"
-  .container
-    .row
-      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-        .post-heading
-          h1= @title || data.page.title
-          h2.subheading= @subtitle || data.page.summary
-          span.meta= data.page.intro.text || data.page.description rescue data.page.description
-          = partial :series_nav
-          = partial :current_page_tags
+= divider data.page.intro.image, intro: true, panorama: true do
+  h1= @title || data.page.title
+  h2.subheading= @subtitle || data.page.summary
+  span.meta= data.page.intro.text || data.page.description rescue data.page.description
+  = partial :series_nav
+  = partial :current_page_tags
+= partial "social_buttons"
