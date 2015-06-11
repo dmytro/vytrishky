@@ -113,6 +113,7 @@
 .intro-header {
     position: relative;
     font-family: $caviar;
+    z-index: 1;
     &.snap {
         margin-top: 5ex;
     }
@@ -152,14 +153,15 @@
 }
 
 blockquote {
-    @media screen and (min-width: 800px) {
-        /* margin-left: 15%; */
-        /* margin-right: 15%; */
-        text-align: center;
-    }
+    /* @media screen and (min-width: 800px) { */
+    /*     /\* margin-left: 15%; *\/ */
+    /*     /\* margin-right: 15%; *\/ */
+    /*     text-align: center; */
+    /* } */
     font-family: Lora,'Times New Roman',serif;
     font-style: italic;
     text-align: justify;
+    text-indent: 3ex;
 }
 
 .photo-wrapper {
@@ -306,7 +308,7 @@ video#bgvid {
     z-index: -100;
     background-repeat: no-repeat;
     background-size: cover;
-    @media screen and (max-device-width: 800px) {
+    @media screen and (max-width: 800px) {
         display: none;
     }
 }
@@ -423,9 +425,18 @@ video#bgvid {
 
 .social-buttons {
     line-height: 1em;
-    position: absolute;
-    top: 3em;
-    right: 0;
+    position: fixed;
+    top: 30%;
+    left: 20px;
+    > div {
+        margin-top: 10px;
+    }
+    @media screen and (max-width: 1199px) {
+        position: absolute;
+        margin-top: 5ex;
+        top: 0;
+        z-index: 2;
+    }
 }
 
 .footnotes {
