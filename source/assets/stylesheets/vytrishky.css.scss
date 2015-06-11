@@ -37,7 +37,7 @@
         content: '';
         background-image: radial-gradient(
                                   ellipse ,
-                                  rgba(255,255,255,$opacity1), rgba(255,255,255,$opacity2)
+                                  rgba(255,255,255,$opacity1) .5, rgba(255,255,255,$opacity2) .99
                               );
     }
 
@@ -45,7 +45,7 @@
 .matte-10 { @include matte(0,    .1) }
 .matte-20 { @include matte(0,    .2) }
 .matte-30 { @include matte(.05,  .3) }
-.matte-40 { @include matte(.05,  .4) }
+.matte-40 { @include matte(.1,  .4) }
 .matte-50 { @include matte(.07,  .5) }
 .matte-60 { @include matte(.07,  .6) }
 .matte-70 { @include matte(.1,   .7) }
