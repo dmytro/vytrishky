@@ -320,6 +320,7 @@ blockquote {
     position: fixed;
     top: 30%;
     left: 20px;
+    z-index: -1;
     > div {
         margin-top: 10px;
     }
@@ -330,6 +331,12 @@ blockquote {
         z-index: 2;
     }
 }
+
+#footer-well.row{
+    /* Above social links */
+    z-index: 1;
+}
+
 
 .footnotes {
     border-top: 1px solid #ccc;
