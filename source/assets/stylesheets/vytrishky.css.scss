@@ -448,3 +448,20 @@ blockquote {
         padding-left: 5ex;
     }
 }
+
+.tooltip {
+    font-size: 1em;
+    font-family: $caviar;
+}
+.tooltip-inner {
+   border: 2px solid #fff;
+   border-radius: 7px;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #fff;
+}
