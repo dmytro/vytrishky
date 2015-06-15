@@ -85,19 +85,21 @@
 
 .text-on-dark {
     p, h2.subheading {
-        padding: 1em;
+        border-radius: 1em;
+        border: 1ex solid rgba(0,0,0,.1);
         background-image: radial-gradient(
                                   ellipse ,
-                                  rgba(0,0,0,1), rgba(0,0,0,.1)
+                                  #000, rgba(0,0,0,.1)
                               );
     }
 }
 .text-on-dark-2 {
     p, h2.subheading {
-        padding: 1em;
+        border-radius: 1em;
+        border: 1ex solid rgba(0,0,0,.1);
         background-image: radial-gradient(
                                   ellipse ,
-                                  rgba(0,0,0,1), rgba(0,0,0,.3)
+                                  #000, rgba(0,0,0,.3)
                               );
     }
 }
