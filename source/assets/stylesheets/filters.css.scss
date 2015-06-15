@@ -1,0 +1,110 @@
+//
+// Sepia
+//
+@each $filter in ("grayscale" "sepia") {
+    @each $value in (10 20 30 40 50 60 70 80 90 100) {
+
+        .#{$filter}-#{$value} {
+        -webkit-filter: unquote("#{$filter}(#{$value}%)");
+        -moz-filter: unquote("#{$filter}(#{$value}%)");
+        -ms-filter: unquote("#{$filter}(#{$value}%)");
+        -o-filter: unquote("#{$filter}(#{$value}%)");
+        filter: unquote("#{$filter}(#{$value}%)");
+    }
+        .#{$filter} {
+        -webkit-filter: unquote("#{$filter}(100%)");
+        -moz-filter: unquote("#{$filter}(100%)");
+        -ms-filter: unquote("#{$filter}(100%)");
+        -o-filter: unquote("#{$filter}(100%)");
+        filter: unquote("#{$filter}(100%)");
+
+    }
+    }
+}
+
+// ------------------------------------------------------------------
+// Matte
+// ------------------------------------------------------------------
+@mixin matte ($opacity1,$opacity2) {
+    &:before {
+        position: absolute;
+        top: 0;　left: 0; //right: 0; bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: radial-gradient(
+                                  ellipse ,
+                                  rgba(255,255,255,$opacity1) .5, rgba(255,255,255,$opacity2) .99
+                              );
+    }
+
+}
+.matte-10 { @include matte(0,    .1) }
+.matte-20 { @include matte(0,    .2) }
+.matte-30 { @include matte(.05,  .3) }
+.matte-40 { @include matte(.1,  .4) }
+.matte-50 { @include matte(.07,  .5) }
+.matte-60 { @include matte(.07,  .6) }
+.matte-70 { @include matte(.1,   .7) }
+.matte-80 { @include matte(.1,   .8) }
+.matte-90 { @include matte(.1,   .9) }
+.matte-100 { @include matte(.5,   1) }
+.matte   { @include matte(.5,   1) }
+
+// ------------------------------------------------------------------
+// Vignette
+// ------------------------------------------------------------------
+@mixin vignette ($opacity1,$opacity2) {
+    &:before {
+        position: absolute;
+        top: 0;　left: 0; //right: 0; bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: radial-gradient(
+                                  ellipse ,
+                                  rgba(0,0,0,$opacity1), rgba(0,0,0,$opacity2)
+                              );
+    }
+
+}
+.vignette-10 { @include vignette(0,    .1) }
+.vignette-20 { @include vignette(0,    .2) }
+.vignette-30 { @include vignette(.05,  .3) }
+.vignette-40 { @include vignette(.05,  .4) }
+.vignette-50 { @include vignette(.07,  .5) }
+.vignette-60 { @include vignette(.07,  .6) }
+.vignette-70 { @include vignette(.1,   .7) }
+.vignette-80 { @include vignette(.1,   .8) }
+.vignette-90 { @include vignette(.1,   .9) }
+.vignette-100 { @include vignette(.5,   1) }
+.vignette   { @include vignette(.5,   1) }
+
+.text-on-dark {
+    p, h2.subheading {
+        border-radius: 1em;
+        border: 1ex solid rgba(0,0,0,.1);
+        background-image: radial-gradient(
+                                  ellipse ,
+                                  #000, rgba(0,0,0,.1)
+                              );
+    }
+}
+.text-on-dark-2 {
+    p, h2.subheading {
+        border-radius: 1em;
+        border: 1ex solid rgba(0,0,0,.1);
+        background-image: radial-gradient(
+                                  ellipse ,
+                                  #000, rgba(0,0,0,.3)
+                              );
+    }
+}
+
+.text-shadow {
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+}
+
+.text-shadow-2 {
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 25px #000;
+}
