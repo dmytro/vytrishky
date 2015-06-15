@@ -10,10 +10,10 @@
   - style = "background-image: url('#{post_image_path image}'); #{position}"
 
 .intro-header.shadow-z-5 class="#{Array(filters).join(" ")}" style="#{style}"
+  - if locals[:video]
+    = partial :video, locals: locals
   .container
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
         div class="#{locals[:intro] ? "post-heading" : "chapter"}"
-          - if locals[:video]
-            = partial :video, locals: locals
           = yield

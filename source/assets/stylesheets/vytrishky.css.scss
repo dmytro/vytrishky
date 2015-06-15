@@ -150,6 +150,23 @@
     &.chapter-divider-tall {
         min-height: 100vh;
     }
+    video.bgvid {
+        clear: both;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;;
+        overflow: hidden;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        position: absolute;
+        z-index: -100;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media screen and (max-width: 799px) {
+            display: none;
+        }
+    }
 }
 
 blockquote {
@@ -294,24 +311,6 @@ blockquote {
 }
 
 
-video#bgvid {
-    margin-top: 5ex;
-    clear: both;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;;
-    overflow: hidden;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    position: absolute;
-    z-index: -100;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @media screen and (max-width: 800px) {
-        display: none;
-    }
-}
 
 // Series navigation
 //

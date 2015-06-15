@@ -7,6 +7,7 @@
  *= require jquery.easing.min
  *= require jquery.scrollstop
  *= require jquery.scrollsnap
+ *= require video_matte
 
  */
 
@@ -16,11 +17,6 @@ $(document).ready(function() {
         snaps: '.snap',
         proximity: 200,
         latency: 1000
-    });
-    $('video').on('ended', function () {
-        // console.log("END");
-        this.load();
-        this.play();
     });
     $('[data-toggle="tooltip"]').tooltip();
 
