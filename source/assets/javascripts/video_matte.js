@@ -23,10 +23,16 @@ $('video.bgvid').on('play', function () {
         $("#" + lft).css(css).css({left: 0});
         $("#" + rgt).css(css).css({right: 0});
     }
-
 });
 
-$('video').on('ended', function () {
-    this.load();
-    this.play();
-});
+// $('video.bgvid').on('ended error', function (e) {
+//     // console.log(e.type);
+//     this.load();
+//     this.play();
+// });
+
+
+// $('video.bgvid').on('loadstart progress suspend abort error emptied stalled loadedmetadata loadeddata canplay canplaythrough playing waiting seeking seeked ended durationchange play pause ratechange resize volumechange', function (e) {
+//     console.log(e.type);
+//     // console.log(e);
+// });
