@@ -164,38 +164,43 @@ helpers do
     image_path data.page.top_image
   end
 
+  # Merge image file name with prefix from YAML data
+  # `data.page.images.basepath`
   def post_image(image)
     prefix = data.page.images.basepath rescue ''
     [prefix, image].join("/").sub(/^\//,'')
   end
 
+  # Same as image_path with prepended prefix
   def post_image_path(image)
     image_path(post_image(image))
   end
 
+  # Same as image_link with prepended prefix
   def post_image_link(image)
     image_link post_image image
   end
 
-  def chapters( post )
-    headers = File.readlines( post.source_file ).collect do |x|
-      if x =~ /^\#{1,6}\s(.*)/
-        $1
-      else
-        nil
-      end
-    end.compact
+  # Not used here
+  # def chapters( post )
+  #   headers = File.readlines( post.source_file ).collect do |x|
+  #     if x =~ /^\#{1,6}\s(.*)/
+  #       $1
+  #     else
+  #       nil
+  #     end
+  #   end.compact
 
 
-    case markdown_engine
-    when :redcarpet
-      headers.map { |x| [x, x.downcase.gsub( /\s/, "-" )] }
-    when :kramdown
-      headers.each_with_index.map { |x,i| [x,i == 0 ? "section" : "section-#{i}"] }
-    else
-      []
-    end
-  end
+  #   case markdown_engine
+  #   when :redcarpet
+  #     headers.map { |x| [x, x.downcase.gsub( /\s/, "-" )] }
+  #   when :kramdown
+  #     headers.each_with_index.map { |x,i| [x,i == 0 ? "section" : "section-#{i}"] }
+  #   else
+  #     []
+  #   end
+  # end
 
 
 end
