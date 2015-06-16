@@ -1,4 +1,4 @@
-= divider data.page.intro.image, video: data.page.intro.video, intro: true, panorama: true, filters: data.page.intro.filters || default_filters do
+= divider custom_intro_background, video: data.page.intro.video, intro: true, panorama: true, filters: data.page.intro.filters || default_filters do
   h1= @title || data.page.title
   h2.subheading= @subtitle || data.page.summary
   span= data.page.intro.text || data.page.description rescue data.page.description
