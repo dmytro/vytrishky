@@ -1,12 +1,16 @@
-$('video').on('play', function () {
+$('video.bgvid').on('play', function () {
     var inner = $(this);
     var width = inner.offset().left;
+
+    var idx = $(this).index();
 
     if (width > 0) {
 
         var outer = inner.parent();
-        outer.append("<div id='bgvid-l'>");
-        outer.append("<div id='bgvid-r'>");
+        var lft = "bgvid-l-" + idx;
+        var rgt = "bgvid-r-" + idx;
+        outer.append("<div id='"+ lft +"'>");
+        outer.append("<div id='"+ rgt +"'>");
 
         var css = {
             position: 'absolute',
@@ -16,12 +20,8 @@ $('video').on('play', function () {
             "background-color": "#666"
         };
 
-        $("#bgvid-l").css(css);
-        $("#bgvid-r").css(css);
-
-        $("#bgvid-l").css({left: 0});
-        $("#bgvid-r").css({right: 0});
-
+        $("#" + lft).css(css).css({left: 0});
+        $("#" + rgt).css(css).css({right: 0});
     }
 
 });
