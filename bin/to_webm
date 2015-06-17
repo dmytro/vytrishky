@@ -1,0 +1,10 @@
+#!/bin/bash
+
+INPUT=$1
+
+[ -z ${INPUT} ] && { echo "Input?"; exit 1; }
+
+OUTPUT=$(dirname ${INPUT})/$(basename ${INPUT} .mp4).webm
+
+
+ffmpeg -i ${INPUT} -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis ${OUTPUT}
