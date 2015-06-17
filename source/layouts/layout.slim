@@ -8,7 +8,7 @@ html[lang="en"]
     link type="image/png" href="#{data.site.base_url}/favicon.png" rel="icon"
 
     - description = capture do
-      => [ data.page.title, data.page.description, data.site.title, data.site.description].compact.map(&:chomp).join(" | ").strip
+      => [ data.page.description, data.site.title, data.site.description].compact.map(&:chomp).join(" | ").strip
       - if data.page.series
         | | З циклу #{data.page.series}
 
