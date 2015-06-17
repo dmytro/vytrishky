@@ -5,7 +5,7 @@ html[lang="en"]
     meta[http-equiv="X-UA-Compatible" content="IE=edge"]
     title= data.page.title
 
-    link type="image/png" href="/#{base}favicon.png" rel="icon"
+    link type="image/png" href="#{data.site.base_url}/favicon.png" rel="icon"
 
     - description = capture do
       => [ data.page.title, data.page.description, data.site.title, data.site.description].compact.map(&:chomp).join(" | ").strip
