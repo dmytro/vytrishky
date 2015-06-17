@@ -29,7 +29,9 @@
     a {
         color: white;
     }
-    text-align: justify;
+    h2, span {
+        text-align: justify;
+    }
     position: relative;
 
     &.chapter-divider-light {
