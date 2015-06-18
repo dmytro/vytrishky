@@ -17,3 +17,13 @@ title: "Всі витрішки"
 = partial :by_year
 ul.list-unstyled
   = partial :list_articles, locals: { articles: page_articles}
+
+center.page-navigation
+  - if @num_pages > 1
+    h2
+      = partial :page_prev
+      = t "paging.page"
+      =<> @page_number
+      = t "paging.of"
+      =<> @num_pages
+      = partial :page_next
