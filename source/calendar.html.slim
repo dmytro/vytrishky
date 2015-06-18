@@ -29,8 +29,7 @@ intro:
         = link_to year.to_s, "/#{year}.html"
 
 .container
-  ul
+  ul.list-unstyled
     - page_articles.reverse.each_with_index do |article, i|
       li
-        = link_to article.title, article
-        span=<> article.date.strftime('%b %e')
+        = partial :article_link, locals: { article: article }

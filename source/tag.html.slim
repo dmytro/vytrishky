@@ -24,10 +24,4 @@ intro:
       = partial :page_next
 
 ul.list-unstyled
-  - page_articles.group_by {|a| a.date.year }.each do |year, articles|
-    li
-      h1= year
-      ul
-        - articles.each_with_index do |article,i|
-          li
-            = partial :article_link, locals: { article: article }
+  = partial :list_articles, locals: { articles: page_articles}

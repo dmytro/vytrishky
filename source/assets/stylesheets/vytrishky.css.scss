@@ -12,7 +12,7 @@
     }
     h2 {
         i.disabled {
-            color: #666;
+            opacity: .25;
         }
         a {
             color: white;
@@ -287,32 +287,34 @@ blockquote {
 
 }
 .footer-links  {
+    position: relative;
     i.fa.fa-2x {
         color: rgb(64,64,64);
     }
     li {
         list-style: none;
         .meta {
-            font-size: 70%;
-            text-indent: 3ex;
+            font-size: .75em;
+            font-style: italic;
+            padding-bottom: 1em;
         }
     }
     i.fa.fa-small {
         line-height: inherit;
         vertical-align: middle;
-        color: #ddd;
+        color: #ccc;
         margin-right: 10px;
-        font-size: 80%;
+    }
+    &#tags a {
+        margin-right: 1ex;
     }
     a {
-        margin-right: 1ex;
-        font-size: 85%;
         display: inline-block;
         color: #666;
         text-decoration: none;
         a:hover {
-        color: #666;
-        text-decoration: none;
+            color: #666;
+            text-decoration: none;
         }
     }
 }
@@ -366,4 +368,46 @@ blockquote {
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: #fff;
+}
+
+.article-link {
+
+    &:hover {
+        color: #404040;
+        background-color: #eee;
+        text-decoration: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 3px 3px 10px rgba(0, 0, 0, 0.33), 8px 8px 15px rgba(0, 0, 0, 0.15), ;
+
+    }
+    padding: 5px;
+    display: block;
+    .date-display {
+        float: left;
+        margin: {
+            right: 10px;
+            bottom: 5px;
+        }
+        line-height: 1.5ex;
+        border: 1px solid #666;
+        border-radius: 50%;
+        vertical-align: middle;
+        display: inline-block;
+        width: 2.5em;
+        height: 2.5em;
+        text-align: center;
+        .date-display-month {
+            display: inline;
+            font-size: .6em;
+        }
+        .date-display-day {
+            display: inline;
+            font-size: 1.3em;
+        }
+    }
+    .article-summary {
+        font-size: .75em;
+        font-style: italic;
+        padding-bottom: 1em;
+        margin-left: 5em;
+    }
 }

@@ -1,19 +1,19 @@
 ---
 pageable: true
 layout: simple
-per_page: 5
+per_page: 10
 intro:
   image: backgrounds/index.jpg
   filters:
     - vignette-90
 title: "Всі витрішки"
 ---
+
+- @next_page = next_page
+- @prev_page = prev_page
+- @page_number = page_number
+- @num_pages = num_pages
+
 = partial :by_year
 ul.list-unstyled
-  - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-    li
-      h1= year
-      ul
-        - articles.each do |article|
-          li
-            = partial :article_link, locals: { article: article }
+  = partial :list_articles, locals: { articles: page_articles}
