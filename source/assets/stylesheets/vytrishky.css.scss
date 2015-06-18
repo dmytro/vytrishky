@@ -322,7 +322,6 @@ blockquote {
     position: fixed;
     top: 30%;
     left: 20px;
-    /* z-index: 1; */
     > div {
         margin-top: 10px;
     }
@@ -334,9 +333,12 @@ blockquote {
     }
 }
 
-#footer-well.row{
+#footer-well{
+    position: relative;
     /* Above social links */
-    z-index: 1;
+    .row {
+        z-index: 1;
+    }
 }
 
 
