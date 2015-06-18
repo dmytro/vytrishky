@@ -395,8 +395,11 @@ blockquote {
     .article-title, .date-display {
         font-family: $caviar;
     }
+    .article-title {
+        font-size: 1.1em;
+    }
     padding: .5em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     display: block;
     .date-display {
         float: right;
@@ -404,7 +407,7 @@ blockquote {
             left: 10px;
             /* bottom: 5px; */
         }
-        line-height: 1.2em;
+        line-height: 1em;
         border: 2px solid #666;
         border-radius: 50%;
         vertical-align: middle;
@@ -414,7 +417,7 @@ blockquote {
         text-align: center;
         .date-display-month {
             display: inline;
-            font-size: .8em;
+            font-size: .7em;
         }
         .date-display-day {
             display: inline;
