@@ -28,8 +28,7 @@ intro:
       - blog.articles.map {|a| a.date.year }.uniq.each do |year|
         = link_to year.to_s, "/#{year}.html"
 
-.container
-  ul.list-unstyled
-    - page_articles.reverse.each_with_index do |article, i|
-      li
-        = partial :article_link, locals: { article: article }
+ul.list-unstyled
+  - page_articles.reverse.each_with_index do |article, i|
+    li
+      = partial :article_link, locals: { article: article }

@@ -1,9 +1,9 @@
 = link_to article, class: "article-link" do
-  span.date-display
+  .date-display
     span.date-display-month= article.date.strftime('%b')
     br
     span.date-display-day= article.date.strftime('%e')
-  => article.title
+  span.article-title=> article.title
   - unless article.data.series.nil?
     small
       | (З циклу &laquo;#{article.data.series}&raquo;)
