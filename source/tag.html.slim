@@ -23,8 +23,11 @@ intro:
       =<> num_pages
       = partial :page_next
 
-- page_articles.each_with_index do |article, i|
-  li
-    =<> link_to article.title, article
-    span
-      =<> article.date.strftime('%b %e')
+ul.list-unstyled
+  - page_articles.group_by {|a| a.date.year }.each do |year, articles|
+    li
+      h1= year
+      ul
+        - articles.each_with_index do |article,i|
+          li
+            = partial :article_link, locals: { article: article }

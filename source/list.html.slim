@@ -16,4 +16,4 @@ ul.list-unstyled
       ul
         - articles.each do |article|
           li
-            = link_to "#{article.title}  #{article.data.series.nil? ? "" : "<small> &nbsp;(З циклу &laquo;#{article.data.series}&raquo;)</small>"}", article
+            = partial :article_link, locals: { article: article }
