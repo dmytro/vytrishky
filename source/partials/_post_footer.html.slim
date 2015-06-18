@@ -2,15 +2,15 @@
 p
 #footer-well.container.well
   .row
-    .col-md-5
+    .col-md-6
       .row.text-center
         h1
           i.fa.fa-book
       .row
       = partial :previous_posts
-    #tags.col-md-5.col-md-offset-1
+    .col-md-6
       .row.text-center
         h1
           i.fa.fa-tags
-      .row
-        = partial :tags
+      .row.tag-cloud
+        = partial :tag_cloud
