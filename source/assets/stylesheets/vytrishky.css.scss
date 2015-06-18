@@ -214,8 +214,14 @@ blockquote {
     }
 }
 
+.navbar-header, .navbar-collapse.collapse.in {
+    background-color: #333;
+}
 
-
+.navbar-custom.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    top: -78px;
+}
 // Series navigation
 //
 #series-nav {

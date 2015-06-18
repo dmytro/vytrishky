@@ -7,19 +7,20 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand[href="http://dmytro.github.io"]
-        .small До технічного блогу
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-left
+        a.navbar-brand[href="http://dmytro.github.io"]
+          i.fa.fa-3x.fa-terminal data-toggle="tooltip" data-placement="bottom"  title="Технічний блог"
       ul.nav.navbar-nav.navbar-right
 
         li= link_to "#{base}/list"
-          i.fa.fa-2x.fa-home
+          i.fa.fa-3x.fa-home data-toggle="tooltip" data-placement="bottom"  title="Статті"
 
         li= link_to "#{base}/tags"
-          i.fa.fa-2x.fa-tags
+          i.fa.fa-3x.fa-tags data-toggle="tooltip" data-placement="bottom"  title="Теги"
 
         li= link_to "#{base}/"
-          | Про блог
+          i.fa.fa-3x.fa-question-circle data-toggle="tooltip" data-placement="bottom"  title="Про блог"
 
         li= link_to "#{base}/contact"
-          | Контакт
+          i.fa.fa-3x.fa-envelope-o data-toggle="tooltip" data-placement="bottom" title="Автор"
