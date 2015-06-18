@@ -220,8 +220,27 @@ blockquote {
 
 .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
-    top: -78px;
+    top: -120px;
 }
+
+.navbar-custom {
+    .tooltip {
+        font-size: 16px;
+    }
+    .fa {
+        &.fa-inverse {
+            color: #333;
+        }
+    }
+    &.is-fixed {
+        .fa {
+            &.fa-inverse {
+                color: #fff;
+            }
+        }
+    }
+}
+
 // Series navigation
 //
 #series-nav {
