@@ -2,6 +2,15 @@
 @import "filters.css.scss";
 
 
+@mixin material-link {
+        color: #404040;
+        text-decoration: none;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+        outline: 2px solid rgba(0, 0, 0, 0.05);
+        -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 // ------------------------------------------------------------------
 .intro-header {
     position: relative;
@@ -305,9 +314,6 @@ blockquote {
         color: #ccc;
         margin-right: 10px;
     }
-    &#tags a {
-        margin-right: 1ex;
-    }
     a {
         display: inline-block;
         color: #666;
@@ -334,6 +340,17 @@ blockquote {
         z-index: 2;
     }
 }
+
+.tag-cloud {
+    a {
+        margin-right: 1ex;
+        padding: 3px;
+        &:hover {
+                @include material-link
+        }
+    }
+}
+
 
 #footer-well{
     position: relative;
@@ -373,31 +390,31 @@ blockquote {
 .article-link {
 
     &:hover {
-        color: #404040;
-        background-color: #eee;
-        text-decoration: none;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 3px 3px 10px rgba(0, 0, 0, 0.33), 8px 8px 15px rgba(0, 0, 0, 0.15), ;
-
+        @include material-link
     }
-    padding: 5px;
+    .article-title, .date-display {
+        font-family: $caviar;
+    }
+    padding: .5em;
+    margin-bottom: 1em;
     display: block;
     .date-display {
-        float: left;
+        float: right;
         margin: {
-            right: 10px;
-            bottom: 5px;
+            left: 10px;
+            /* bottom: 5px; */
         }
-        line-height: 1.5ex;
-        border: 1px solid #666;
+        line-height: 1.2em;
+        border: 2px solid #666;
         border-radius: 50%;
         vertical-align: middle;
-        display: inline-block;
-        width: 2.5em;
-        height: 2.5em;
+        display: block;
+        width: 3em;
+        height: 3em;
         text-align: center;
         .date-display-month {
             display: inline;
-            font-size: .6em;
+            font-size: .8em;
         }
         .date-display-day {
             display: inline;
@@ -408,6 +425,5 @@ blockquote {
         font-size: .75em;
         font-style: italic;
         padding-bottom: 1em;
-        margin-left: 5em;
     }
 }
