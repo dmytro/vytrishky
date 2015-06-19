@@ -30,16 +30,4 @@
     .tooltip {
         font-size: 16px;
     }
-    .fa {
-        &.fa-inverse {
-            color: #333;
-        }
-    }
-    &.is-fixed {
-        .fa {
-            &.fa-inverse {
-                color: #fff;
-            }
-        }
-    }
 }
