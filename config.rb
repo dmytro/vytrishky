@@ -57,7 +57,7 @@ helpers do
     if file = sitemap.resources.find { |x| x.path =~ %r{#{prefix}#{image}}}
       file.path.sub(/^assets\/images\//, '')
     else
-      data.page.intro.image
+      data.page.intro.image rescue ""
     end
   end
   #

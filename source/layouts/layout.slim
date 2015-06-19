@@ -21,7 +21,7 @@ html[lang="en"]
     meta property="og:description" content="#{description}"
     meta property="og:type" content="website"
 
-    - if data.page.intro.image
+    - if !data.page.intro.nil? && data.page.intro.image
       link rel="image_src" href="#{og_image_path}"
       meta property="og:image" content="#{og_image_path}"
 
