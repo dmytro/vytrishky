@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	$(".fancybox")
         .fancybox({
-            padding    : 5,
+            padding    : 2,
             margin     : 0,
             nextEffect : 'fade',
             prevEffect : 'none',
@@ -31,9 +31,9 @@ $(document).ready(function() {
                 $.extend(this, {
                     aspectRatio : false,
                     type    : 'html',
-                    width   : '97%',
-                    height  : '97%',
-                    content : '<div class="fancybox-image" style="background-image:url(' + this.href + '); background-size: contain; background-position:50% 50%;background-repeat:no-repeat;height:100%;width:100%;" /></div>'
+                    width   : '100%',
+                    height  : '100%',
+                    content : '<div class="fancybox-image" style="background-image:url(' + this.href + '); " /></div>'
                 });
             }
 	})
