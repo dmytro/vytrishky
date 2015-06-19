@@ -1,0 +1,43 @@
+.tooltip {
+    font-size: 1em;
+    font-family: $caviar;
+}
+.tooltip-inner {
+   border: 2px solid #fff;
+   border-radius: 7px;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #fff;
+}
+
+.navbar-header, .navbar-collapse.collapse.in {
+    background-color: #333;
+}
+
+.navbar-custom.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    top: -120px;
+}
+
+.navbar-custom {
+    .tooltip {
+        font-size: 16px;
+    }
+    .fa {
+        &.fa-inverse {
+            color: #333;
+        }
+    }
+    &.is-fixed {
+        .fa {
+            &.fa-inverse {
+                color: #fff;
+            }
+        }
+    }
+}
