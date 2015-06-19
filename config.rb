@@ -51,7 +51,7 @@ end
 helpers do
 
   def custom_intro_background
-    image = "#{current_page.path.sub(/\.html$/,'')}.jpg"
+    image = current_path.sub(/\.html$/,'.jpg')
     prefix = "assets/images/backgrounds/"
 
     if file = sitemap.resources.find { |x| x.path =~ %r{#{prefix}#{image}}}
