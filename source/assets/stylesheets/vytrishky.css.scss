@@ -369,6 +369,11 @@ blockquote {
     }
 }
 
+article {
+    p {
+        text-indent: 3ex;
+    }
+}
 .article-link {
 
     &:hover {

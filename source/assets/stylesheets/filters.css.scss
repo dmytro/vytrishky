@@ -81,7 +81,7 @@
 .vignette   { @include vignette(.5,   1) }
 
 .text-on-dark {
-    p, h2.subheading {
+    p, h2.subheading, span {
         border-radius: 1em;
         border: 1ex solid rgba(0,0,0,.1);
         background-image: radial-gradient(
