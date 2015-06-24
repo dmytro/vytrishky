@@ -85,6 +85,21 @@ blockquote {
     text-indent: 3ex;
 }
 
+.video-wrapper {
+    position: relative;
+    .card {
+        position: relative;;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 3em;
+        video.video-fluid {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 .photo-wrapper {
     padding-bottom: 75%;
     position: relative;
