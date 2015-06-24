@@ -13,24 +13,23 @@ intro:
 - @title = "#{data.page.title} #{t "calendar.for"} #{date.to_s}"
 - @next_page = next_page
 - @prev_page = prev_page
-- @subtitle = capture
-  - if paginate && num_pages > 1
-    h2
-      = partial :page_prev
-      = t "paging.page"
-      =<> page_number
-      = t "paging.of"
-      =<> num_pages
-      = partial :page_next
-  #year-nav
-    | Інші роки
-    h5
-      - blog.articles.map {|a| a.date.year }.uniq.each do |year|
-        = link_to year.to_s, "/#{year}.html"
 
-.container
-  ul
-    - page_articles.reverse.each_with_index do |article, i|
-      li
-        = link_to article.title, article
-        span=<> article.date.strftime('%b %e')
+- if paginate && num_pages > 1
+  h2
+    = partial :page_prev
+    = t "paging.page"
+    =<> page_number
+    = t "paging.of"
+    =<> num_pages
+    = partial :page_next
+
+ul.list-unstyled
+  - page_articles.reverse.each_with_index do |article, i|
+    li
+      = partial :article_link, locals: { article: article }
+
+#year-nav.year-nav-index
+  h2 Інші роки
+  h3
+    - blog.articles.map {|a| a.date.year }.uniq.each do |year|
+      = link_to year.to_s, "/#{year}.html"

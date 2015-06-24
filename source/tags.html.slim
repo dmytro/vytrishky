@@ -11,6 +11,5 @@ title: Позначки (теги)
   i.fa.fa-lg.fa-tags
   =<> current_page.data.title
 
-#tags.footer-links
-    - tag_cloud.map do |tag,size|
-      = link_to tag, tag_path(tag), style: "font-size: #{size}px;"
+.footer-links
+  = partial :tag_cloud

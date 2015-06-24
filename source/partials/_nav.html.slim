@@ -7,19 +7,31 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand[href="http://dmytro.github.io"]
-        .small До технічного блогу
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-left
+        li
+          a.navbar-brand[href="http://dmytro.github.io"]
+            span.fa-stack.fa-3x
+              i.fa.fa-circle-thin.fa-stack-2x
+              i.fa.fa-terminal.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Технічний блог"
       ul.nav.navbar-nav.navbar-right
 
         li= link_to "#{base}/list"
-          i.fa.fa-2x.fa-home
+          span.fa-stack.fa-3x
+            i.fa.fa-circle-thin.fa-stack-2x
+            i.fa.fa-home.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Статті"
 
         li= link_to "#{base}/tags"
-          i.fa.fa-2x.fa-tags
+          span.fa-stack.fa-3x
+            i.fa.fa-circle-thin.fa-stack-2x
+            i.fa.fa-tags.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Теги"
 
         li= link_to "#{base}/"
-          | Про блог
+          span.fa-stack.fa-3x
+            i.fa.fa-circle-thin.fa-stack-2x
+            i.fa.fa-info.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Про блог"
 
         li= link_to "#{base}/contact"
-          | Контакт
+          span.fa-stack.fa-3x
+            i.fa.fa-circle-thin.fa-stack-2x
+            i.fa.fa-envelope-o.fa-stack-1x data-toggle="tooltip" data-placement="bottom" title="Автор"

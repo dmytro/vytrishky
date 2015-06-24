@@ -2,6 +2,18 @@
 @import "filters.css.scss";
 
 
+@mixin material-link {
+        color: #404040;
+        text-decoration: none;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+        outline: 2px solid rgba(0, 0, 0, 0.05);
+        -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+i.disabled {
+    opacity: .25;
+}
 // ------------------------------------------------------------------
 .intro-header {
     position: relative;
@@ -11,9 +23,6 @@
         margin-top: 5ex;
     }
     h2 {
-        i.disabled {
-            color: #666;
-        }
         a {
             color: white;
             &:hover {
@@ -29,7 +38,9 @@
     a {
         color: white;
     }
-    text-align: justify;
+    h2, span {
+        text-align: justify;
+    }
     position: relative;
 
     &.chapter-divider-light {
@@ -204,7 +215,6 @@ blockquote {
 }
 
 
-
 // Series navigation
 //
 #series-nav {
@@ -275,42 +285,41 @@ blockquote {
     a {
         color: white;
         font-size: 80%;
-        &:not(:last-child) {
+        &:not(:first-child):not(:last-child) {
             &:after {
                 content: "|";
-                padding: 1ex;
+                padding: 0.5ex;
             }
         }
     }
 
 }
 .footer-links  {
+    position: relative;
     i.fa.fa-2x {
         color: rgb(64,64,64);
     }
     li {
         list-style: none;
         .meta {
-            font-size: 70%;
-            text-indent: 3ex;
+            font-size: .75em;
+            font-style: italic;
+            padding-bottom: 1em;
         }
     }
     i.fa.fa-small {
         line-height: inherit;
         vertical-align: middle;
-        color: #ddd;
+        color: #ccc;
         margin-right: 10px;
-        font-size: 80%;
     }
     a {
-        margin-right: 1ex;
-        font-size: 85%;
         display: inline-block;
         color: #666;
         text-decoration: none;
         a:hover {
-        color: #666;
-        text-decoration: none;
+            color: #666;
+            text-decoration: none;
         }
     }
 }
@@ -320,7 +329,6 @@ blockquote {
     position: fixed;
     top: 30%;
     left: 20px;
-    z-index: -1;
     > div {
         margin-top: 10px;
     }
@@ -332,9 +340,23 @@ blockquote {
     }
 }
 
-#footer-well.row{
+.tag-cloud {
+    a {
+        margin-right: 1ex;
+        padding: 3px;
+        &:hover {
+                @include material-link
+        }
+    }
+}
+
+
+#footer-well{
+    position: relative;
     /* Above social links */
-    z-index: 1;
+    .row {
+        z-index: 1;
+    }
 }
 
 
@@ -347,19 +369,46 @@ blockquote {
     }
 }
 
-.tooltip {
-    font-size: 1em;
-    font-family: $caviar;
-}
-.tooltip-inner {
-   border: 2px solid #fff;
-   border-radius: 7px;
-}
+.article-link {
 
-.tooltip.top .tooltip-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #fff;
+    &:hover {
+        @include material-link
+    }
+    .article-title, .date-display {
+        font-family: $caviar;
+    }
+    .article-title {
+        font-size: 1.1em;
+    }
+    padding: .5em;
+    margin-bottom: .5em;
+    display: block;
+    .date-display {
+        float: right;
+        margin: {
+            left: 10px;
+            /* bottom: 5px; */
+        }
+        line-height: 1em;
+        border: 2px solid #666;
+        border-radius: 50%;
+        vertical-align: middle;
+        display: block;
+        width: 3em;
+        height: 3em;
+        text-align: center;
+        .date-display-month {
+            display: inline;
+            font-size: .7em;
+        }
+        .date-display-day {
+            display: inline;
+            font-size: 1.3em;
+        }
+    }
+    .article-summary {
+        font-size: .75em;
+        font-style: italic;
+        padding-bottom: 1em;
+    }
 }

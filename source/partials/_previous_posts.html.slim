@@ -3,6 +3,9 @@
   ul
     - blog.articles[0..4].each do |article|
       li
-        i.fa.fa-sm.fa-pencil.fa-small
-        = link_to article.title, article.url
-        .meta= article.data.summary
+        = link_to article.url, class: "article-link" do
+
+          i.fa.fa-sm.fa-pencil.fa-small
+          span= article.title
+          .article-summary
+            = partial :article_summary, locals: {article: article }

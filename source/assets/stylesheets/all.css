@@ -7,5 +7,6 @@
 *= require jquery.fancybox
 *= require fancybox-override
 *= require vytrishky
+*= require bootstrap_override
 
 */

@@ -51,13 +51,13 @@ end
 helpers do
 
   def custom_intro_background
-    image = "#{current_page.path.sub(/\.html$/,'')}.jpg"
+    image = current_path.sub(/\.html$/,'.jpg')
     prefix = "assets/images/backgrounds/"
 
     if file = sitemap.resources.find { |x| x.path =~ %r{#{prefix}#{image}}}
-      file.path
+      file.path.sub(/^assets\/images\//, '')
     else
-      data.page.intro.image
+      data.page.intro.image rescue ""
     end
   end
   #
@@ -264,7 +264,7 @@ configure :build do
     html.preserve_line_breaks       = false  # Preserve line breaks
     html.simple_boolean_attributes  = true   # Use simple boolean attributes
   end
-  activate :asset_hash, :ignore => [/fonts/]
+  activate :asset_hash, :ignore => [/fonts/, /favicon.png/]
   activate :gzip
   ignore '*.less'
   ignore(/Icon\r$/)

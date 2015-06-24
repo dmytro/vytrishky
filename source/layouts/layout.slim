@@ -5,10 +5,10 @@ html[lang="en"]
     meta[http-equiv="X-UA-Compatible" content="IE=edge"]
     title= data.page.title
 
-    link type="image/png" href="/#{base}favicon.png" rel="icon"
+    link type="image/png" href="#{data.site.base_url}/favicon.png" rel="icon"
 
     - description = capture do
-      => [ data.page.title, data.page.description, data.site.title, data.site.description].compact.map(&:chomp).join(" | ").strip
+      => [ data.page.description, data.site.title, data.site.description].compact.map(&:chomp).join(" | ").strip
       - if data.page.series
         | | З циклу #{data.page.series}
 
@@ -17,11 +17,11 @@ html[lang="en"]
     meta name="keywords" content="#{Array(data.page.tags).join(",")}"
     meta name="author" content="#{data.site.author.name }"
 
-    meta property="og:title" content="#{data.site.title}"
+    meta property="og:title" content="#{data.page.title || data.site.title}"
     meta property="og:description" content="#{description}"
     meta property="og:type" content="website"
 
-    - if data.page.intro.image
+    - if !data.page.intro.nil? && data.page.intro.image
       link rel="image_src" href="#{og_image_path}"
       meta property="og:image" content="#{og_image_path}"
 

@@ -1,0 +1,7 @@
+- articles.group_by {|a| a.date.year }.each do |year, articles|
+  li
+    h1= year
+    ul
+      - articles.each do |article|
+        li.list-unstyled
+          = partial :article_link, locals: { article: article }

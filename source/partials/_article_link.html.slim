@@ -1,0 +1,11 @@
+= link_to article, class: "article-link" do
+  .date-display
+    span.date-display-month= article.date.strftime('%b')
+    br
+    span.date-display-day= article.date.strftime('%e')
+  span.article-title=> article.title
+  - unless article.data.series.nil?
+    small
+      | (З циклу &laquo;#{article.data.series}&raquo;)
+  br
+  .article-summary= partial :article_summary, locals: {article: article }

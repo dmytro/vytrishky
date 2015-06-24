@@ -1,4 +1,12 @@
 - @subtitle = capture
+  - if @num_pages > 1
+    h2
+      = partial :page_prev
+      = t "paging.page"
+      =<> @page_number
+      = t "paging.of"
+      =<> @num_pages
+      = partial :page_next
   #year-nav
     | По роках
     h4

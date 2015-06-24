@@ -8,10 +8,12 @@ intro:
     - vignette-90
 ---
 
-center#year-nav.year-nav-index
-  h3
-    - blog.articles.map {|a| a.date.year }.uniq.sort.each do |year|
-      = link_to year.to_s, "/#{year}.html"
+- @subtitle = capture
+  = data.page.summary
+  center#year-nav
+    h3
+      - blog.articles.map {|a| a.date.year }.uniq.sort.each do |year|
+        = link_to year.to_s, "/#{year}.html"
 
 markdown:
   Блог "Витрішки" --- це блог про все, що завгодно, крім того, чим я займаюся на роботі,  і це майже все, що я можу сказати про тематику цього блогу.
