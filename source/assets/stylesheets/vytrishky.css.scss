@@ -339,6 +339,12 @@ blockquote {
     }
 }
 
+.vertical-aligned {
+    margin-top: 3em;
+    p {
+        margin-top: 0;
+    }
+}
 .social-buttons {
     line-height: 1em;
     position: fixed;
@@ -356,9 +362,12 @@ blockquote {
 }
 
 .tag-cloud {
+    margin-right: 3ex;
+    text-align: justify;
     a {
         margin-right: 1ex;
         padding: 3px;
+        white-space: nowrap;
         &:hover {
                 @include material-link
         }
@@ -384,6 +393,11 @@ blockquote {
     }
 }
 
+article {
+    p {
+        text-indent: 3ex;
+    }
+}
 .article-link {
 
     &:hover {
