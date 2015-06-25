@@ -1,0 +1,10 @@
+- if !development?
+  = chapter do
+    #disqus
+    h3#disqus-comments-control
+      span.fa.fa-2x.fa-comments>
+      | Коментарі #{disqus_count}
+      span.fa.fa-caret-down
+      span.fa.fa-caret-up
+    #disqus-comments
+      = disqus

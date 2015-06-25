@@ -36,5 +36,11 @@ $(document).ready(function() {
                     content : '<div class="fancybox-image" style="background-image:url(' + this.href + '); " /></div>'
                 });
             }
-	})
+	    });
+
+    $("#disqus-comments-control").click( function () {
+        $("#disqus-comments").toggle("slow");
+        $("#disqus-comments-control .fa-caret-down").toggle();
+        $("#disqus-comments-control .fa-caret-up").toggle();
+    })
 });

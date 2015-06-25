@@ -1,10 +1,5 @@
 = wrap_layout :simple do
   article
     = yield
+= partial :disqus
 = partial :post_footer
-
-- if !development?
-  = chapter do
-    h4 Коментарі
-    = disqus
-    = disqus_count

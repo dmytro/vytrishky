@@ -2,10 +2,6 @@
   = partial :intro, locals: {background: post_top_image }
   article
     = yield
-  = partial :post_footer
 
-  - if !development?
-    = chapter do
-      h4 Коментарі
-      = disqus
-      = disqus_count
+  = partial :disqus
+  = partial :post_footer

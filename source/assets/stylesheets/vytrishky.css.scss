@@ -365,11 +365,10 @@ blockquote {
     margin-right: 3ex;
     text-align: justify;
     a {
-        margin-right: 1ex;
         padding: 3px;
         white-space: nowrap;
         &:hover {
-                @include material-link
+            @include material-link
         }
     }
 }
@@ -439,5 +438,19 @@ article {
         font-size: .75em;
         font-style: italic;
         padding-bottom: 1em;
+    }
+}
+
+#disqus-comments {
+    display: none;
+}
+
+#disqus-comments-control {
+    cursor: pointer;
+    .fa-caret-down {
+        display: inline;
+    }
+    .fa-caret-up {
+        display: none;
     }
 }
