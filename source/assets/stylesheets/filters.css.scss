@@ -77,6 +77,10 @@
 .vignette-70 { @include vignette(.1,   .7) }
 .vignette-80 { @include vignette(.1,   .8) }
 .vignette-90 { @include vignette(.1,   .9) }
+.vignette-95 { @include vignette(.2,   .95) }
+.vignette-99 { @include vignette(.25,   .99) }
+
+
 .vignette-100 { @include vignette(.5,   1) }
 .vignette   { @include vignette(.5,   1) }
 
