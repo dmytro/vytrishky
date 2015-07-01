@@ -17,7 +17,7 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
       ul.nav.navbar-nav.navbar-right
 
         - if current_page.data.layout =~ /^(simple_)?post$/
-          li.comments-nav= link_to "#disqus"
+          li.comments-nav= link_to "#disqus", id: "disqus-comments-toplink"
             span.fa-stack.fa-3x
               i.fa.fa-circle-thin.fa-stack-2x
               i.fa.fa-comments.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Коментарі"

@@ -43,4 +43,10 @@ $(document).ready(function() {
         $("#disqus-comments-control .fa-caret-down").toggle();
         $("#disqus-comments-control .fa-caret-up").toggle();
     })
+    // When user clicks on top link - always show comments.
+    $("#disqus-comments-toplink").click( function () {
+        $("#disqus-comments").show("slow");
+        $("#disqus-comments-control .fa-caret-down").hide();
+        $("#disqus-comments-control .fa-caret-up").show();
+    })
 });
