@@ -24,7 +24,7 @@ intro:
     = partial :page_next
 
 ul.list-unstyled
-  - page_articles.reverse.each_with_index do |article, i|
+  - page_articles.each_with_index do |article, i|
     li
       = partial :article_link, locals: { article: article }
 
