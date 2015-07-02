@@ -1,0 +1,6 @@
+#!/bin/bash
+
+SOURCE=$1
+
+TARGET=$(echo $SOURCE | sed 's/mp4/webm/')
+ffmpeg -i $SOURCE -acodec libvorbis -aq 5 -ac 2 -qmax 20 -threads 2 $TARGET
