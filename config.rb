@@ -123,6 +123,10 @@ helpers do
 
   alias :photos3 :photo
 
+  def youtube(video)
+    partial :youtube, locals: { video: video }
+  end
+
   def gallery(pictures, **params, &block)
     partial :gallery, locals: { pictures: Array(pictures) }.merge(**params) do
       block_given? ? yield : ""
