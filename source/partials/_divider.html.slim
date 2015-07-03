@@ -6,8 +6,7 @@
 
 - position = locals[:position] ? "background-position: #{position};"  : ""
 
-- unless locals[:video]
-  - style = "background-image: url('#{post_image_path image}'); #{position}"
+- style = "background-image: url('#{post_image_path image}'); #{position}"
 
 .intro-header.shadow-z-5 class="#{Array(filters).join(" ")}" style="#{style}"
   - if locals[:video]
