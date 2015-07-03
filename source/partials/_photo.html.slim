@@ -1,10 +1,11 @@
+- filters = (locals[:filters] || %w{vignette-40}) + Array(locals[:filters_plus])
 - layout = locals[:layout] ? layout : ""
 - url = post_image_path(pictures)
 - position = locals[:position] ? "background-position: #{position};" : ""
 
-.photo-wrapper[class="photo-#{layout}"]
+.photo-wrapper[class="photo-#{layout} " ]
   .card
-    .card-image style="background-image: url('#{url}'); #{position}"
+    .card-image style="background-image: url('#{url}'); #{position}" class="#{Array(filters).join(" ")}"
       = link_to "", url, class: "fancybox", rel: "#{locals[:rel] ? rel : rand(1000)}"
     .card-text
       = yield
