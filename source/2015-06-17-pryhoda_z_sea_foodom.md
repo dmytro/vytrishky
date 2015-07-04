@@ -7,7 +7,8 @@ description: |
 intro:
   image: "2015-06-17-pryhoda_z_sea_foodom.jpg"
 tags:
-  - приколи
+  - travel
+  - funny
   - Hiroshima
   - food
 
