@@ -271,6 +271,7 @@ configure :build do
   activate :asset_hash, :ignore => [/fonts/, /favicon.png/]
   activate :gzip
   ignore '*.less'
+  ignore '*_template.*'
   ignore(/Icon\r$/)
   ignore(/\.DS_Store/)
   ignore(/^assets.*\.yml/)

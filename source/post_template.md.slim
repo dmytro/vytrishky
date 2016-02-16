@@ -1,0 +1,77 @@
+---
+
+layout: post
+# series: Uncomment if searies
+title: ""
+description: |
+  Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
+
+# intro:
+#   image: oboke/IMG_6550.JPG
+#   video: oboke/koinobori
+#   filters:
+#     - vignette-90
+#     - sepia-20
+#     - text-shadow
+
+intro:
+  image: image.jpg
+  filters:
+    - vignette-90
+    - sepia-90
+    - text-shadow-2
+
+images:
+  basepath: 2002
+
+tags:
+  - lorem
+  - ipsum
+  - reprehenderit
+---
+
+= chapter do
+  markdown:
+
+    # Title of the chapter
+
+    ## Sub Title
+
+    >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum.
+
+= divider "IMG_1493.jpg", filters: %w{vignette} do
+  markdown:
+
+
+  = gallery  [ "IMG_1490.jpg", "IMG_1491.jpg","IMG_1492.jpg", "IMG_1493.jpg", "IMG_1494.jpg"] do
+
+    p At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+
+= chapter do
+  markdown:
+  .col-sm-6.text-justify
+    markdown:
+
+      asdfasdf
+
+=chapter do
+  = gallery imgs(%w{1772 1774 2221 2228}) do
+
+    p Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
+=  pull_left(photo(%w{musei/IMG_4557.JPG musei/IMG_6298.JPG musei/IMG_6302.JPG }, layout: :portrait), 8) do
+
+= pull_right(gallery(%w{iya/iya_onsen/IMG_6536.jpg iya/iya_onsen/IMG_6546.jpg}, layout: :portrait), 6)
+
+= divider "tranquil_short_half_speed.jpg", video: "tranquil_short_half_speed", filters: %w{text-shadow} do
+
+
+= youtube "nvUB7W7e6tQ"
+
+= google_map "https://www.google.com/maps/embed?pb=!1m28!1m8!1m3!1d105904.37442423931!2d134.4774347!3d33.9536851!3m2!1i1024!2i768!4f13.1!4m17!3e0!4m5!1s0x3553a85c4b17df55%3A0x5f774550fda59787!2z6YGT44Gu6aeF5rip5rOJ44Gu6YeM56We5bG    xLCDjgJI3NzEtMzMxMCBUb2t1c2hpbWEgUHJlZmVjdHVyZSwgTXlvemFpIERpc3RyaWN0LCBLYW1peWFtYSwgSmlucnlvLCBOaXNoaXVldHN1bm_iiJIxNTHiiJIx!3m2!1d33.973561!2d134.367695!4m3!3m2!1d33.9632755!2d134.3393345!4m5!1s0x355315b17d83f3cf%3A0x725a4a187adc    1cbc!2z6YGT44Gu6aeF5YWs5pa544Gu6YO344Gq44GL44GM44KPLCDjgJI3NzktMTIzNiBUb2t1c2hpbWEgUHJlZmVjdHVyZSwgQW5hbiwgTmFrYWdhd2FjaG90YWt1bXVqaSwgMjLiiJI2!3m2!1d33.952937999999996!2d134.667812!5e0!3m2!1suk!2sjp!4v1435892300914"
+
+
+= pull_right google_map( "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6617.611617373745!2d134.36573122747805!3d33.9718304342963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x5f774550fda59787!2z6YGT44Gu6aeF5rip5rOJ44Gu6YeM56We5bGx!5e0!3m2!1suk!2sus!4v1435806934791"), 6 do
