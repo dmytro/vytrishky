@@ -17,7 +17,7 @@
     - grid_h.times do
       tr.gallery-row
         - grid_w.times do
-          td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path pictures[idx]}); "
+          td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path pictures[idx]}); width: #{100.0/grid_w}%;"
             = link_to "", post_image_path(pictures[idx]), class: "fancybox", rel: gallery_id
           - idx += 1
   .gallery-text-box
