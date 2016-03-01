@@ -5,9 +5,9 @@ DATE=Time.now.strftime("%Y/%m/%d %H:%M")
 REMOTE_V="git@github.com:dmytro/vytrishky.git"
 
 
+desc "Create build directory and gh-pages branch."
 task :setup do
-
-  sh "test -d build || { rm -rf build && git clone -b #{PUBLISH_BRANCH} git@github.com:dmytro/vytrishky.git build; }"
+  sh "git clone -b #{PUBLISH_BRANCH} #{REMOTE_V} build"
 end
 
 desc "compile and publish the site to Github"
@@ -18,3 +18,10 @@ task :publish => [:setup] do
   sh "cd build && git add -A && git commit -m \"At #{DATE} #{comment}\" && git push #{REMOTE} #{PUBLISH_BRANCH}"
   sh "git push origin #{SOURCE_BRANCH}"
 end
+
+# namespace :tags do
+
+#   desc "Prints list of all tags"
+#   task :list do
+#   end
+# end
