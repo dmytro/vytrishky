@@ -72,6 +72,8 @@
 .vignette-20 { @include vignette(0,    .2) }
 .vignette-30 { @include vignette(.05,  .3) }
 .vignette-40 { @include vignette(.05,  .4) }
+.vignette-light { @include vignette(.05,  .4) }
+
 .vignette-50 { @include vignette(.07,  .5) }
 .vignette-60 { @include vignette(.07,  .6) }
 .vignette-70 { @include vignette(.1,   .7) }

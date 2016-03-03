@@ -127,8 +127,8 @@ helpers do
     partial :youtube, locals: { video: video }
   end
 
-  def gallery(pictures, **params, &block)
-    partial :gallery, locals: { pictures: Array(pictures) }.merge(**params) do
+  def gallery(pictures, caption: "", **params, &block)
+    partial :gallery, locals: { caption: caption, pictures: Array(pictures) }.merge(**params) do
       block_given? ? yield : ""
     end
   end

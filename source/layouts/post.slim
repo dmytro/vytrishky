@@ -1,7 +1,9 @@
 = wrap_layout :layout do
   = partial :intro, locals: {background: post_top_image }
   article
+    = partial :link_to_series_post, locals: {direction: :previous}
     = yield
+    = partial :link_to_series_post, locals: {direction: :next}
 
   = partial :disqus
   = partial :post_footer

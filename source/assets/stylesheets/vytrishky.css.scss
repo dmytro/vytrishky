@@ -175,11 +175,12 @@ blockquote {
             padding: {
                 left: 1.5ex;
                 right: 1.5ex;
-                top: .5ex;
-                bottom: 0;
+                top: 1ex;
+                bottom: .5ex;
             }
-            font-size: 85%;
-            height: 20%;
+            text-align: justify;
+            font-size: 80%;
+            min-height: 15%;
             overflow: auto;
             .container {
                 p {
@@ -410,7 +411,7 @@ blockquote {
 
 article {
     p {
-        text-indent: 3ex;
+        text-indent: 1.5ex;
     }
 }
 .article-link {

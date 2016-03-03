@@ -7,7 +7,9 @@
 - when 11..15; then [3,4]
 - when 16..18; then [3,5]
 - when 18..20; then [3,6]
-- when 20..25; then [4,5]
+- when 21; then [3,7]
+- when 20..23; then [4,5]
+- when 24; then [4,6]
 - else [5,5]
 - idx = 0
 
@@ -23,4 +25,5 @@
           - idx += 1
   .gallery-text-box
     .container
+      = caption
       = yield rescue ''
