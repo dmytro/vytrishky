@@ -7,7 +7,7 @@ REMOTE_V="git@github.com:dmytro/vytrishky.git"
 
 desc "Create build directory and gh-pages branch."
 task :setup do
-  sh "git clone -b #{PUBLISH_BRANCH} #{REMOTE_V} build"
+  sh "[ -d build ] || git clone -b #{PUBLISH_BRANCH} #{REMOTE_V} build"
 end
 
 desc "compile and publish the site to Github"
