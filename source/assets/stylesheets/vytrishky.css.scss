@@ -160,6 +160,7 @@ blockquote {
             font-size: 85%;
             overflow: auto;
             min-height: 2em;
+            max-height: 60%;
             overflow: auto;
             p {
                 margin: 0;
@@ -181,6 +182,7 @@ blockquote {
             text-align: justify;
             font-size: 80%;
             min-height: 15%;
+            max-height: 50%;
             overflow: auto;
             .container {
                 p {
