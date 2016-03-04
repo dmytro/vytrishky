@@ -1,7 +1,7 @@
 - gallery_id = (0..16).to_a.map{|a| rand(16).to_s(16)}.join
 - pictures.each do |picture|
   - content = capture do
-    = partial :photo, locals: {pictures: picture, layout: layout || :landscape, rel: gallery_id}
+    = partial :photo, locals: {caption: caption, pictures: picture, layout: layout || :landscape, rel: gallery_id}
       |
   - case pictures.count
   - when 2
