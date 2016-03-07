@@ -111,7 +111,7 @@ helpers do
 
   # CSS filters applied to images in dividers and intro.
   def default_filters
-    ["sepia-40", "vignette-90"]
+    data.page.filters || ["sepia-40", "vignette-90"]
   end
 
   def photo(pictures, caption: "", filters: default_filters, layout: :landscape, position: nil, &block)
