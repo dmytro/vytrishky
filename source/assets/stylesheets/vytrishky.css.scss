@@ -310,13 +310,14 @@ blockquote {
 }
 
 .navbar-collapse.collapse {
-    p {
+    .menu-text {
         display: none;
     }
 }
 .navbar-collapse.collapse.in {
-    p {
-        display: block;
+    .menu-text {
+        font-size: 200%;
+        display: inline;
         position: relative;
         width: 100%;
         left: 2em;

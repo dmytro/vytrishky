@@ -21,23 +21,34 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
             span.fa-stack.fa-3x
               i.fa.fa-circle-thin.fa-stack-2x
               i.fa.fa-comments.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Коментарі"
+            .menu-text Коментарі
 
         li= link_to "#{base}/list"
           span.fa-stack.fa-3x
             i.fa.fa-circle-thin.fa-stack-2x
-            i.fa.fa-home.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Статті"
+            i.fa.fa-home.fa-stack-1x> data-toggle="tooltip" data-placement="bottom"  title="Статті"
+          .menu-text Статті
+
+        li= link_to "#{base}/series"
+          span.fa-stack.fa-3x
+            i.fa.fa-circle-thin.fa-stack-2x
+            i.fa.fa-files-o.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Цикли статей"
+          .menu-text Цикли статей
 
         li= link_to "#{base}/tags"
           span.fa-stack.fa-3x
             i.fa.fa-circle-thin.fa-stack-2x
             i.fa.fa-tags.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Теги"
+          .menu-text Теги
 
         li= link_to "#{base}/"
           span.fa-stack.fa-3x
             i.fa.fa-circle-thin.fa-stack-2x
             i.fa.fa-info.fa-stack-1x data-toggle="tooltip" data-placement="bottom"  title="Про блог"
+          .menu-text Про блог
 
         li= link_to "#{base}/contact"
           span.fa-stack.fa-3x
             i.fa.fa-circle-thin.fa-stack-2x
             i.fa.fa-envelope-o.fa-stack-1x data-toggle="tooltip" data-placement="bottom" title="Автор"
+          .menu-text Автор
