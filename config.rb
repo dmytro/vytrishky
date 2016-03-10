@@ -112,6 +112,25 @@ helpers do
     blog.articles.find_all {|x| x.data.has_key? 'series' }
   end
 
+  def series_titles
+    all_with_series.map(&:data).map{ |x| x['series'] }.uniq
+  end
+
+  def series_with_a_title(title)
+    blog
+      .articles
+      .find_all {|y| y.data['series'] == title}
+  end
+
+  def series_links
+    series_titles.map{ |x|
+      { x =>  series_with_a_title(x)
+        .sort{ |a,b| a.destination_path <=> b.destination_path }
+        .first
+      }
+    }
+  end
+
   # CSS filters applied to images in dividers and intro.
   def default_filters
     data.page.filters || ["sepia-40", "vignette-90"]
