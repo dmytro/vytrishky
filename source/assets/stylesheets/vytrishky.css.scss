@@ -309,6 +309,21 @@ blockquote {
     }
 }
 
+.navbar-collapse.collapse {
+    p {
+        display: none;
+    }
+}
+.navbar-collapse.collapse.in {
+    p {
+        display: block;
+        position: relative;
+        width: 100%;
+        left: 2em;
+        line-height: 2em;
+        white-space: nowrap;
+    }
+}
 .current-page-tags {
     i {
         padding: 2ex;
