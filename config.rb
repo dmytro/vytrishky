@@ -13,6 +13,9 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :partials_dir, 'partials'
 
+set :url_root, 'http://dmytro.github.io/vytrishky'
+activate :search_engine_sitemap
+
 activate :livereload
 
 activate :directory_indexes
