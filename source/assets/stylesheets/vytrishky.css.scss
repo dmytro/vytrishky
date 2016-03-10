@@ -413,8 +413,13 @@ blockquote {
 
 article {
     @media only screen and (max-width : 992px)  {
-            margin-left: 8px;
-            margin-right: 8px;
+        // /html/body/article/div[4]/div/p[2]
+        div {
+            p {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
     }
     p {
         text-indent: 1.5ex;
