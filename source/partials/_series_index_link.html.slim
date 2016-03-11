@@ -1,6 +1,10 @@
+- url = intro_background_by(article).url
 = link_to article, class: "article-link article-link-well" do
-  .date-display
-    span.date-display-YYYY= article.date.strftime('%Y')
-  span.article-title> Цикл &laquo;#{article.data.series}&raquo;
-  br= article.title
-  .article-summary= partial :article_summary, locals: {article: article }
+  - if url
+    .card__image(style='background-image: url(#{url})')
+  .card__text
+    .date-display
+      span.date-display-YYYY= article.date.strftime('%Y')
+    span.article-title> Цикл &laquo;#{article.data.series}&raquo;
+    br= article.title
+    .article-summary= partial :article_summary, locals: {article: article }

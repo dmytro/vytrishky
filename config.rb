@@ -53,7 +53,9 @@ end
 
 helpers do
 
-  def custom_intro_background
+  # Try to find image in the backgrounds folder with the name same as
+  # current filename, and .jpg
+  def intro_background_by_current_filename
     image = current_path.sub(/\.html$/,'.jpg')
     prefix = "assets/images/backgrounds/"
 
@@ -63,13 +65,28 @@ helpers do
       data.page.intro.image rescue ""
     end
   end
+
+  def intro_background_by(article)
+    sitemap
+      .resources
+      .find{
+      |x| x.path ==
+        [ images_dir,
+         basepath_by(article),
+         article.data.intro.image
+        ].compact.join("/")
+    }
+  end
+
+  def basepath_by(article)
+    article.data.images.basepath rescue nil
+  end
   #
   # Layout helpers
   #
-  def with_series(series)
-    all_with_series.find_all { |art| art.data.series == series }
-  end
 
+  # Build weighted tag cloud.
+  # Return: array [tag_name, size]
   def tag_cloud
     size_min, size_max = 12.0, 30.0
 
@@ -112,6 +129,12 @@ helpers do
     blog.articles.find_all {|x| x.data.has_key? 'series' }
   end
 
+  # Return all posts that have data.series == 'String'
+  def with_series(series)
+    all_with_series.find_all { |art| art.data.series == series }
+  end
+
+  # Array of (String) names of series in the blog.
   def series_titles
     all_with_series.map(&:data).map{ |x| x['series'] }.uniq
   end
@@ -122,6 +145,7 @@ helpers do
       .find_all {|y| y.data['series'] == title}
   end
 
+  # Array of 1st post in each series.
   def series_links
     series_titles.map{ |x|
       series_with_a_title(x)
@@ -135,7 +159,15 @@ helpers do
     data.page.filters || ["sepia-40", "vignette-90"]
   end
 
-  def photo(pictures, caption: "", filters: default_filters, layout: :landscape, position: nil, &block)
+  # Widget 'photo' - card layout.
+  def photo(
+    pictures,
+    caption: "",
+    filters: default_filters,
+    layout: :landscape,
+    position: nil,
+    &block
+  )
     partial_name = Array(pictures).count == 1 ? :photo : :photos3
     partial partial_name,
       locals: {
@@ -219,9 +251,9 @@ helpers do
   end
 
   # Same as image_link with prepended prefix
-  def post_image_link(image)
-    image_link post_image image
-  end
+  # def post_image_link(image)
+  #   image_link post_image image
+  # end
 
   # Not used here
   # def chapters( post )
