@@ -316,7 +316,7 @@ blockquote {
 }
 .navbar-collapse.collapse.in {
     .menu-text {
-        font-size: 200%;
+        font-size: 300%;
         display: inline;
         position: relative;
         width: 100%;
@@ -458,6 +458,7 @@ article {
     .date-display {
         float: right;
         margin: {
+            top: 1ex;
             left: 10px;
             /* bottom: 5px; */
         }
@@ -476,6 +477,11 @@ article {
         .date-display-day {
             display: inline;
             font-size: 1.3em;
+        }
+        .date-display-YYYY {
+            display: inline;
+            line-height: 2.5em;
+            font-size: 1em;
         }
     }
     .article-summary {

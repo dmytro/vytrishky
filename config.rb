@@ -124,10 +124,9 @@ helpers do
 
   def series_links
     series_titles.map{ |x|
-      { x =>  series_with_a_title(x)
+      series_with_a_title(x)
         .sort{ |a,b| a.destination_path <=> b.destination_path }
         .first
-      }
     }
   end
 

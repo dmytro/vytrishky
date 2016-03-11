@@ -1,0 +1,6 @@
+= link_to article, class: "article-link" do
+  .date-display
+    span.date-display-YYYY= article.date.strftime('%Y')
+  span.article-title> Цикл &laquo;#{article.data.series}&raquo;
+  br= article.title
+  .article-summary= partial :article_summary, locals: {article: article }
