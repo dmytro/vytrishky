@@ -123,6 +123,13 @@ helpers do
     "#{data.site.base_url}/#{c}"
   end
 
+
+  # ------------------------------------------------------------------
+  #
+  # All related to article series
+  #
+  # ------------------------------------------------------------------
+
   # Find all articles that have `series` in YAML frontmatter with the
   # same value as in the current article.
   def all_with_series
@@ -135,7 +142,7 @@ helpers do
   end
 
   # Array of (String) names of series in the blog.
-  def series_titles
+  def all_series
     all_with_series.map(&:data).map{ |x| x['series'] }.uniq
   end
 
@@ -147,12 +154,19 @@ helpers do
 
   # Array of 1st post in each series.
   def series_links
-    series_titles.map{ |x|
+    all_series.map{ |x|
       series_with_a_title(x)
         .sort{ |a,b| a.destination_path <=> b.destination_path }
         .first
     }
   end
+
+
+  # ------------------------------------------------------------------
+  #
+  # Widgets
+  #
+  # ------------------------------------------------------------------
 
   # CSS filters applied to images in dividers and intro.
   def default_filters
