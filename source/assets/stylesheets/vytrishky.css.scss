@@ -9,6 +9,7 @@
         outline: 2px solid rgba(0, 0, 0, 0.05);
         -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
         transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 2px;
 
 }
 i.disabled {
@@ -449,8 +450,19 @@ article {
 }
 .article-link {
 
+    &.article-link-well {
+        @include material-link;
+
+        &:hover {
+            @include material-link;
+            transition: box-shadow 0.28s cubic-bezier(2, 0, 1, 1);
+            transition: background-color 0.28s cubic-bezier(2, 0, 1, 1);
+            background-color:rgba(255, 255, 255, 0.4);;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 20px 35px rgba(0, 0, 0, 0.2);
+        }
+    }
     &:hover {
-        @include material-link
+        @include material-link;
     }
     .article-title, .date-display {
         font-family: $caviar;
@@ -459,7 +471,7 @@ article {
         font-size: 1.1em;
     }
     padding: .5em;
-    margin-bottom: .5em;
+    margin-bottom: 1.5em;
     display: block;
     .date-display {
         float: right;

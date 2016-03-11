@@ -39,6 +39,6 @@ intro:
   h3 Останні витрішки
   ul
     - blog.articles[0..2].each do |article|
-      = link_to article, class: "article-link" do
+      = link_to article, class: "article-link article-link-well" do
         i.fa.fa-sm.fa-pencil.fa-small>
         span= article.title
