@@ -71,11 +71,17 @@ helpers do
       .resources
       .find{
       |x| x.path ==
-        [ images_dir,
+        [ base_or_nil,
+         images_dir,
          basepath_by(article),
          article.data.intro.image
         ].compact.join("/")
     }
+  end
+
+  def base_or_nil
+    return nil if base == ""
+    base
   end
 
   def basepath_by(article)
