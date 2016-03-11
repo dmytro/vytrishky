@@ -1,7 +1,7 @@
 - url = intro_background_by(article).url rescue nil
 = link_to article, class: "article-link article-link-well" do
   - if url
-    .card__image(style='background-image: url(#{url})')
+    .card__image(style='background-image: url(#{base}#{url})')
   .date-display
     span.date-display-month= article.date.strftime('%b')
     br

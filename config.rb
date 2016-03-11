@@ -68,15 +68,15 @@ helpers do
 
   def intro_background_by(article)
     sitemap
-      .resources
-      .find{
-      |x| x.path ==
-        [ base_or_nil,
-         images_dir,
-         basepath_by(article),
-         article.data.intro.image
-        ].compact.join("/")
-    }
+        .resources
+        .find{
+        |x| x.path ==
+          [
+          images_dir,
+          basepath_by(article),
+          article.data.intro.image
+          ].compact.join("/")
+      }
   end
 
   def base_or_nil
