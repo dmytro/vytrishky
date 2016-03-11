@@ -384,11 +384,17 @@ blockquote {
     line-height: 1em;
     position: fixed;
     top: 30%;
-    left: 20px;
+    right: 20px;
     > div {
         margin-top: 10px;
     }
     @media screen and (max-width: 1199px) {
+        position: absolute;
+        margin-top: 10em;
+        top: 0;
+        z-index: 2;
+    }
+    @media screen and (max-width: 992px) {
         position: absolute;
         margin-top: 5ex;
         top: 0;
