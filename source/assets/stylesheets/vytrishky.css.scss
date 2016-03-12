@@ -16,6 +16,40 @@ i.disabled {
     opacity: .25;
 }
 // ------------------------------------------------------------------
+.right-caption {
+    margin-left: 2em;
+    text-indent: 0;
+    float: right;
+    text-align: justify;
+    font-family: Times;
+    font-size: smaller;
+    font-style: italic;
+}
+// ------------------------------------------------------------------
+.floating-quote {
+    float: right;
+    font-family: $caviar;
+    font-size: smaller;
+    text-align: justify;
+    font-weight: 800;
+    color: #888;
+    border: solid 1px rgb(128, 223, 255);
+    border-radius: 2px;
+    padding: 1em;
+    padding-top: 1.5em;
+    margin-left: 2em;
+    line-height: 1.2;
+    quotes: "\201C""\201D""\2018""\2019";
+    :before {
+        color: rgba(128, 223, 255, .5);
+        content: open-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-right: 0.2em;
+        vertical-align: -0.3em;
+    }
+}
+// ------------------------------------------------------------------
 .intro-header {
     position: relative;
     font-family: $caviar;
