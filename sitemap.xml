@@ -211,6 +211,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2016/03/12/zemletrus_p3_panika.html</loc>
+    <lastmod>2016-03-12T14:25:21+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/page/2.html</loc>
     <lastmod>2016-02-28T11:36:48+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -415,13 +421,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/2014/01/31.html</loc>
+    <loc>http://dmytro.github.io/vytrishky/2013/07.html</loc>
     <lastmod>2016-02-28T11:36:48+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/2013/07.html</loc>
+    <loc>http://dmytro.github.io/vytrishky/2014/01/31.html</loc>
     <lastmod>2016-02-28T11:36:48+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1058,6 +1064,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2016/03.html</loc>
+    <lastmod>2016-02-28T11:36:48+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2016/03/12.html</loc>
     <lastmod>2016-02-28T11:36:48+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
