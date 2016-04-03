@@ -79,9 +79,20 @@ helpers do
       }
   end
 
-  def base_or_nil
-    return nil if base == ""
-    base
+
+  #
+  # For link to article use like
+  #
+  # `link_to 'title', article_by_title('title')`
+  #
+  def article_by_title(title)
+    blog.articles.find { |article| article.title.downcase == title.downcase }
+  rescue
+    nil
+  end
+
+  def link_to_article(title)
+    link_to title, article_by_title(title)
   end
 
   def basepath_by(article)
