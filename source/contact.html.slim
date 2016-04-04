@@ -1,27 +1,68 @@
 ---
+title: Витрішки
+summary: Це - і мій блог про що завгодно, тільки не про роботу
 layout: simple
 intro:
   image: backgrounds/about.jpg
   filters:
-    - vignette
-    - greyscale-60
+    - vignette-90
+    - sepia-40
+    - text-shadow
 ---
+
 - @title = capture
   = image_tag "dmytro.jpg", width: "150px", height: "150px", class: "img img-circle shadow-z-5", style: "margin: -10px; margin-right: 2em;"
-  | Це - я
+  | Витрішки
+
+- @subtitle = capture
+  = data.page.summary
+  center#year-nav
+    h3
+      - blog.articles.map {|a| a.date.year }.uniq.sort.each do |year|
+        = link_to year.to_s, "/#{year}.html"
+
+/ -------------------------------------------- row
+.row.row-34-page
+  .col-md-5
+    .row.text-center
+      h1
+        i.fa.fa-2x.fa-user
+    .row.text-center
+      p.text-justify
+        | Мене звуть Дмитро Ковальов, і все це написав я. Пізніше, як у мене буде напад самокритики, я обов'язково щось напишу і про себе.
+
+  .col-md-5.col-md-offset-1
+    .row.text-center
+      h1
+        i.fa.fa-2x.fa-comments
+    .row
+    p.text-justify
+      markdown:
+        Блог "Витрішки" --- це блог про все, що завгодно, крім того, чим я займаюся на роботі,  і це майже все, що я можу сказати про тематику цього блогу.
 
 
-.col-md-5
-  .row.text-center
-    h1
-      i.fa.fa-2x.fa-user
-  .row
-    p.text-justify  Мене звуть Дмитро Ковальов, і все це написав я. Пізніше, як у мене буде напад самокритики, я обов'язково щось напишу.
+.row.row-34-page
+  .col-md-5
+    .row.text-center
+      h1
+        i.fa.fa-2x.fa-github
+    .row.text-center
+      p.text-justify
+        markdown:
+          Всі мої технічні записи і документація до програмних проектів (переважно англійською), а також ресурси (трохи застарілі) присвячені українізації Лінакса, та вживанню української мови на операційних системах типу Юніксу та Лінаксу розташовані на [моєму Ґітхаб сайті](http://dmytro.github.io).
+  .col-md-5.col-md-offset-1
+    .row.text-center
+      h1
+        i.fa.fa-2x.fa-user-secret
+    .row
+      p.text-justify
+        | Можете зв'язатися зі мною або скористувавшися соціальними ланками внизу сторінки, чи через коментарі.
 
-
-.col-md-5.col-md-offset-1
-  .row.text-center
-    h1
-      i.fa.fa-2x.fa-comments
-  .row
-  p.text-justify А поки-що можете зв'язатися зі мною або скористувавшися соціальними ланками внизу сторінки, чи через коментарі.
+.row
+  h3 Кілька останніх дописів-витрішок
+  ul
+    - blog.articles[0..9].each do |article|
+      = partial :article_link, locals: { article: article }
+      / = link_to article, class: "article-link article-link-well" do
+      /   i.fa.fa-sm.fa-pencil.fa-small>
+      /   span= article.title

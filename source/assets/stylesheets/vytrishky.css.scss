@@ -575,3 +575,15 @@ article {
         display: none;
     }
 }
+
+.row {
+    &.row-page {
+        height: 100vh;
+    }
+    &.row-half-page {
+        min-height: 50vh;
+    }
+    &.row-34-page {
+        min-height: 75vh;
+    }
+}
