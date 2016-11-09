@@ -370,6 +370,7 @@ configure :build do
   ignore(/^assets\/javascripts\/(?!all).*\.js/)
   ignore(%r{^assets/stylesheets/colorschemas/.*})
   ignore(%r{/src/})
+  ignore(%r{/TODO/})
 
 
   # if ENV['CDN_HOST']
