@@ -1,7 +1,8 @@
 - video = data.page.intro.video rescue ""
+- vimeo_bg = data.page.intro.vimeo_bg rescue ""
 - filters = (data.page.intro.filters || default_filters) rescue default_filters
 
-= divider intro_background_by_current_filename, video: video, intro: true, panorama: true, filters: filters do
+= divider intro_background_by_current_filename, vimeo_bg: vimeo_bg, video: video, intro: true, panorama: true, filters: filters do
   h1= @title || data.page.title
   h2.subheading= @subtitle || data.page.summary
   span= data.page.intro.text || data.page.description rescue data.page.description
