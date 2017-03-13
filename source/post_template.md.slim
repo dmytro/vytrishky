@@ -44,37 +44,90 @@ tags:
 = divider "IMG_1493.jpg", filters: %w{vignette} do
   markdown:
 
-# Photos
-
-Filter position
-
-= pull_left(photo("IMG_2476.jpg", position: "center bottom")) do
-
-= pull_left(photo(%w{musei/IMG_4557.JPG musei/IMG_6298.JPG musei/IMG_6302.JPG }, layout: :portrait), 8) do
-
-= pull_right(gallery(%w{iya/iya_onsen/IMG_6536.jpg iya/iya_onsen/IMG_6546.jpg}, layout: :portrait), 6)
-
-= gallery  [ "IMG_1490.jpg", "IMG_1491.jpg","IMG_1492.jpg", "IMG_1493.jpg", "IMG_1494.jpg"] do
-
-=chapter do
-  = gallery imgs(%w{1772 1774 2221 2228}) do
-
 
 = chapter do
   markdown:
   .col-sm-6.text-justify
     markdown:
 
-      asdfasdf
-
-
     p Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
 
+--------------------------------------------------------------------------------
 
-= divider "tranquil_short_half_speed.jpg", video: "tranquil_short_half_speed", filters: %w{text-shadow} do
+# Partials
 
 
+  = partial :float_quote do
+    p "Плавуча цитата" в блакитній рамці з символом лапок
+
+  = partial :right_caption
+    p "Плавуча цитата" без рамки і лапок
+
+  = pull_right, pull_left
+
+  = pull_left( <what>, <width>) do <width> - optional, defailt 4. (4 out
+  of 12, Bootstrap grid)
+
+--------------------------------------------------------------------------------
+
+# Filters
+
+  - usage:
+
+    = divider "photo.jpg", filters: %w{} do
+
+- List
+  - matte (matte-100), matte-10..matte-100
+  - vignette (vignette-100), vignette-light, vignette-10.. vignette-100
+  - text-on-dark, text-on-dark-2
+  - text-shadow, text-shadow-2
+  - text-white-outline, text-white-outline-2
+
+--------------------------------------------------------------------------------
+# Photos
+
+= photo %w{...},
+     filters: %w{},
+     layout: :portrait,
+     position: "position ",
+     caption: "Test of caption"
+
+= photos3 alias
+
+= gallery %w{...},
+     caption: "Test of caption"
+
+
+= pull_left(photo(%w{musei/IMG_4557.JPG musei/IMG_6298.JPG musei/IMG_6302.JPG }, layout: :portrait), 8) do
+
+= pull_right(gallery(%w{iya/iya_onsen/IMG_6536.jpg iya/iya_onsen/IMG_6546.jpg}, layout: :portrait), 6)
+
+= gallery  [ "IMG....jpg" ... ] do
+
+
+=chapter do
+  = gallery imgs(%w{1772 1774 2221 2228}) do
+
+
+--------------------------------------------------------------------------------
+
+# Video
+
+Youtube fluid video partial
 = youtube "nvUB7W7e6tQ"
+
+
+Embed video in divider:
+
+Local file
+= divider "tranquil_short_half_speed.jpg", video: "tranquil_short_half_speed", filters: %w{} do
+
+Vimeo
+
+= divider "IMG_0291.jpg", vimeo_bg: "206757450" ,filters: %w{vignette-90 text-shadow-2} do
+  markdown:
+
+--------------------------------------------------------------------------------
 
 # Google MAP
 
