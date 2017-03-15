@@ -4,6 +4,21 @@
     left: 0;
     width: 100%;
     height: 100%;
+    &:after {
+        position:absolute;
+        top:0;
+        right:0;
+        content:'';
+        width: 20px;
+        height: 20px;
+        background: url("/assets/images/icons/full-screen-icon-32241.png");
+        background: {
+            repeat: no-repeat;
+            position: center center;
+            color: transparent;
+            size: 20px 20px;
+        }
+    }
 }
 
 .fancybox-close {
