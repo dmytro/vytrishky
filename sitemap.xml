@@ -206,7 +206,7 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2016/03/07/zemletrus_p2.html</loc>
-    <lastmod>2016-04-14T16:48:32+09:00</lastmod>
+    <lastmod>2017-03-06T15:49:47+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -249,6 +249,12 @@
   <url>
     <loc>http://dmytro.github.io/vytrishky/2017/03/03/bali_05_2016_nusa_dua.html</loc>
     <lastmod>2017-03-06T10:59:01+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2017/03/15/chichibu_2016_miyamoto_ke.html</loc>
+    <lastmod>2017-03-15T22:23:03+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1141,6 +1147,24 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/saitama.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/chichibu.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/ryokan.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2017.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1148,6 +1172,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2017/03.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2017/03/15.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
