@@ -185,6 +185,12 @@ helpers do
   #
   # ------------------------------------------------------------------
 
+  def floating_quote(text = "", &block)
+    partial :float_quote do
+      block_given? ? yield : text
+    end
+  end
+
   # CSS filters applied to images in dividers and intro.
   def default_filters
     data.page.filters || ["sepia-40", "vignette-90"]

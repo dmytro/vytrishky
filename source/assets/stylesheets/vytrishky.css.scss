@@ -66,7 +66,7 @@ i.disabled {
     margin-left: 2em;
     line-height: 1.2;
     quotes: "\201C""\201D""\2018""\2019";
-    :before {
+    p:first-child:before {
         color: rgba(128, 223, 255, .5);
         content: open-quote;
         font-size: 3em;
