@@ -6,18 +6,18 @@
     height: 100%;
     &:after {
         position:absolute;
-        top:0;
+        bottom:0;
         right:0;
         content:'';
-        width: 20px;
-        height: 20px;
-        background: url("http://downloadicons.net/sites/default/files/full-screen-icon-32241.png");
+        width: 30px;
+        height: 30px;
+        background: url("http://pngify.me/gd/makefg.php?i=icons/Application/full-screen.png");
         /* background: url("/vytrishky/assets/images/icons/full-screen-icon-32241.png"); */
         background: {
             repeat: no-repeat;
             position: center center;
-            color: transparent;
-            size: 20px 20px;
+            color: #888;
+            size: 30px 30px;
         }
     }
 }
