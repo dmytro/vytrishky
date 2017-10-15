@@ -13,10 +13,11 @@
         height: 30px;
         background: url("http://pngify.me/gd/makefg.php?i=icons/Application/full-screen.png");
         /* background: url("/vytrishky/assets/images/icons/full-screen-icon-32241.png"); */
+        opacity: 0.3;
         background: {
             repeat: no-repeat;
             position: center center;
-            color: #888;
+            color: #fff;
             size: 30px 30px;
         }
     }
