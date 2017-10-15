@@ -313,6 +313,14 @@ helpers do
   #   end
   # end
 
+  # pretty queoted text
+  def q text
+    "«#{ text }»"
+  end
+
+  def Q text
+    "„#{ text }“"
+  end
 
 end
 
