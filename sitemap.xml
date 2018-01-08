@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://dmytro.github.io/vytrishky/2002/07/20/shintoistyka-vstup.html</loc>
-    <lastmod>2017-10-15T14:46:33+09:00</lastmod>
+    <lastmod>2018-01-08T13:36:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -242,7 +242,13 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2016/09/22/shikoku_2016_matsuyama_doogo-onsen.html</loc>
-    <lastmod>2017-03-18T22:02:29+09:00</lastmod>
+    <lastmod>2018-01-08T13:36:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2016/12/20/puquoq_visa.html</loc>
+    <lastmod>2018-01-08T15:10:39+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -260,19 +266,19 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2017/03/15/chichibu_2016_miyamoto_ke.html</loc>
-    <lastmod>2017-03-15T22:23:03+09:00</lastmod>
+    <lastmod>2018-01-08T13:36:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2017/10/15/dyadya_kolya.html</loc>
-    <lastmod>2017-10-15T14:49:17+09:00</lastmod>
+    <lastmod>2018-01-08T13:36:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/2013/08/01.html</loc>
-    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <loc>http://dmytro.github.io/vytrishky/2017/12/22/vietnam_visa.html</loc>
+    <lastmod>2018-01-08T15:10:39+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -458,6 +464,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/22.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2013/08/01.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1147,6 +1159,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/vietnam.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/tags/bali.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1189,6 +1207,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2017/12.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2017/12/22.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2017/10.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1226,6 +1256,18 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2016.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2016/12.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2016/12/20.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
