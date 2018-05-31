@@ -295,6 +295,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2018/05/27/bonsai_omiya_hikawa_jinja.html</loc>
+    <lastmod>2018-05-31T20:53:58+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2013/08/01.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/page/2.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -476,12 +488,6 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/22.html</loc>
-    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://dmytro.github.io/vytrishky/2013/08/01.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1225,6 +1231,24 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/saitama-ken.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/omiya.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/bonsai.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2018.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1232,6 +1256,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2018/05.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2018/05/27.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
