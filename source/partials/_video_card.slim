@@ -1,0 +1,17 @@
+
+
+- href = "https://www.youtube.com/embed/#{id}?rel=0;3&amp;autohide=1&amp;showinfo=0" if locals[:source] == :youtube
+
+- href = "https://player.vimeo.com/video/#{id}?title=0&byline=0&portrait=0&color=000000" if locals[:source] == :vimeo
+
+.video-wrapper.youtube-wrapper
+  .card.snap
+      iframe src="#{href}" style="border: 0;" webkitallowfullscreen mozallowfullscreen allowfullscreen
+
+/ .col-sm-10.col-sm-offset-1.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1.col-xl-4.card-container
+/   .thumbnail
+/     .aspect-ratio
+/       iframe src="#{href}" style="border: 0;" webkitallowfullscreen mozallowfullscreen allowfullscreen
+/     .caption
+/       - if locals[:title]
+/         h3 = title

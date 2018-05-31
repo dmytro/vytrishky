@@ -185,6 +185,19 @@ helpers do
   #
   # ------------------------------------------------------------------
 
+  def youtube(id: "", title: "")
+    video source: :youtube, id: id, title: title
+  end
+
+  def vimeo(id: "", title: "")
+    video source: :vimeo, id: id, title: title
+  end
+
+  def video(id: "", title: "", source: :youtube, &block)
+    partial "video_card",
+      locals: {  title: title, id: id, source: source }
+  end
+
   def floating_quote(text = "", &block)
     partial :float_quote do
       block_given? ? yield : text
