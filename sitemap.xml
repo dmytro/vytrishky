@@ -307,6 +307,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2019/01/11/philippines_podorozh_navkolo_panglao.html</loc>
+    <lastmod>2019-01-12T01:39:33+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/page/2.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1268,6 +1274,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2019/01.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2019/01/11.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
