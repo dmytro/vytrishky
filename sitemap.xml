@@ -313,6 +313,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2019/01/13/philippines_inshi_prynady_boholya.html</loc>
+    <lastmod>2019-01-13T11:56:33+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/page/2.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -493,13 +499,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/2004/10/20.html</loc>
+    <loc>http://dmytro.github.io/vytrishky/2013/07/30.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/2013/07/30.html</loc>
+    <loc>http://dmytro.github.io/vytrishky/2004/10/20.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1267,6 +1273,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/bohol.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2019.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1274,6 +1286,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2019/01.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2019/01/13.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
