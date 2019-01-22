@@ -1,19 +1,14 @@
 - (grid_h, grid_w) = case pictures.count
-- when 1,2,3,5; then [1,pictures.count]
-- when 4; then [2,2]
+- when 1,2,3; then [1,pictures.count]
+- when 4,5; then [2,2]
 - when 6..7; then [2,3]
-- when 8; then [2,4]
-- when 9..11; then [3,3]
+- when 8..11; then [2,4]
 - when 11..14; then [3,4]
-- when 15..17; then [3,5]
-- when 18..19; then [3,6]
-- when 20; then [4,5]
-- when 21; then [3,7]
-- when 22..23; then [4,5]
-- when 24; then [4,6]
-- when 25..27; then [5,5]
-- when 28..29; then [4,7]
+- when 15..19; then [3,5]
+- when 20..23; then [4,5]
+- when 24..29; then [4,6]
 - else [5,6]
+
 - idx = 0
 
 - gallery_id = (0..16).to_a.map{|a| rand(16).to_s(16)}.join
@@ -23,9 +18,25 @@
     - grid_h.times do
       tr.gallery-row
         - grid_w.times do
-          td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path pictures[idx]}); width: #{100.0/grid_w}%;"
+
+          - total_cells = grid_h * grid_w
+          - hidden_pictures = pictures.count - total_cells
+          - last_cell = (total_cells == (idx + 1))
+          - have_hidden = (hidden_pictures > 0)
+
+          td.gallery-cell   style="position: relative; padding-bottom: #{100.0/grid_h/2}%; background-image: url(#{post_image_path pictures[idx]}); width: #{100.0/grid_w}%;" class="#{'vignette-99 !important;' if (last_cell && have_hidden)}"
             = link_to "", post_image_path(pictures[idx]), class: "fancybox", rel: gallery_id
-          - idx += 1
+            - idx += 1
+
+            - show_remaining = ((idx ==  total_cells ) && pictures.count - total_cells > 0)
+            - if show_remaining
+              h1  + #{hidden_pictures}
+
+    - (pictures.count - grid_h * grid_w).times do
+      = link_to "", post_image_path(pictures[idx]), class: "fancybox", rel: gallery_id
+      - idx += 1
+
+
   .gallery-text-box
     .container
       = caption

@@ -302,7 +302,16 @@ blockquote {
                     background-size: cover;
                     background-position: center top;
                     background-repeat: no-repeat;
-
+                    h1 {
+                        color: white;
+                        font-size: 200%;
+                        font-weight: bold !important;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-right: -50%;
+                        transform: translate(-50%, -50%)
+                    }
                 }
             }
 
