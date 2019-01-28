@@ -1,4 +1,5 @@
 - (grid_h, grid_w) = case pictures.count
+- when 0; then [0,0]
 - when 1,2,3; then [1,pictures.count]
 - when 4,5; then [2,2]
 - when 6..7; then [2,3]
