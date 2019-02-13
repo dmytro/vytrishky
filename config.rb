@@ -53,6 +53,11 @@ end
 
 helpers do
 
+  # Use tag translation if available, or original tag otherwise
+  def tag_text(tag)
+    data.tags[tag.downcase] || tag
+  end
+
   # Try to find image in the backgrounds folder with the name same as
   # current filename, and .jpg
   def intro_background_by_current_filename

@@ -1,3 +1,3 @@
 .tag-cloud
   - tag_cloud.map do |tag,size|
-    =<> link_to tag, tag_path(tag), style: "font-size: #{size}px;"
+    =<> link_to tag_text(tag), tag_path(tag), style: "font-size: #{size}px;"
