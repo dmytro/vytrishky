@@ -499,12 +499,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/contact/</loc>
-    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/30.html</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1688,6 +1682,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/31.html</loc>
+    <lastmod>2016-04-14T16:48:34+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/contact/</loc>
     <lastmod>2016-04-14T16:48:34+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
