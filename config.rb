@@ -354,7 +354,7 @@ configure :development do
 end
 
 configure :build do
-  set :base, "/vytrishky"
+  set :base, ""
   activate :relative_assets
   # activate :directory_indexes
   activate :sprockets

@@ -4,12 +4,12 @@
 @mixin font-face($font-family, $weight, $slant) {
     @font-face {
         font-family: "#{$font-family}";
-        src: url("<%= base %>/fonts/#{$font-family}_#{$weight}.eot");
-        src: url("<%= base %>/fonts/#{$font-family}_#{$weight}.eot?#iefix") format("embedded-opentype"),
-             url("<%= base %>/fonts/#{$font-family}_#{$weight}.woff") format("woff"),
-             url("<%= base %>/fonts/#{$font-family}_#{$weight}.woff2") format("woff2"),
-             url("<%= base %>/fonts/#{$font-family}_#{$weight}.ttf") format("truetype"),
-             url("<%= base %>/fonts/#{$font-family}_#{$weight}.svg##{$font-family}#{$weight}") format("svg");
+        src: url("/fonts/#{$font-family}_#{$weight}.eot");
+        src: url("/fonts/#{$font-family}_#{$weight}.eot?#iefix") format("embedded-opentype"),
+             url("/fonts/#{$font-family}_#{$weight}.woff") format("woff"),
+             url("/fonts/#{$font-family}_#{$weight}.woff2") format("woff2"),
+             url("/fonts/#{$font-family}_#{$weight}.ttf") format("truetype"),
+             url("/fonts/#{$font-family}_#{$weight}.svg##{$font-family}#{$weight}") format("svg");
         @if $weight == "Bold" {
             font-weight: 700;
         } @else {
