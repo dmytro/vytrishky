@@ -1,7 +1,7 @@
 ---
-akita: Акіта
+akita: преф.Акіта
 #  atadara-kougen:
-#  auto-camp:
+auto-camp: авто-кемпінг
 asia: Азія
 bali: Балі
 bohol: Боголь
@@ -16,18 +16,16 @@ diving: підводний спорт
 earthquake: землетрус
 ennin: Еннін
 food: їжа
-fukushima: Фукушіма
+fukushima: преф.Фукушіма
 funny: цікаве
 geiser: гейзер
 geothermal-electric: геотермальна електрика
 hachimantai: Хачімантай
 hamamatsu: Хамамацу
-#higashi-iya:
 hiking: походи
 #hiraidzumi:
-#hiroshima:
+hiroshima: Хірошіма
 history: історія
-#index:
 indonesia: Індонезія
 ise: Ісе
 ishinomaki: Ішіномакі
@@ -40,7 +38,7 @@ japan: Японія
 kamakura: Камакура
 #keyaki:
 kobo-daishi: Кобо Дайші
-koinobori: койноборі (коропи)
+koinobori: койноборі(коропи)
 kokeshi: ляльки кокеші
 kuji: Куджі
 kumano: Кумано
@@ -49,7 +47,7 @@ kurosawa: Куросава
 lagnguage: мова
 lake-tazawa: оз.Тазава
 matsuyama: Мацуяма
-michino-eki: дорожня станція
+michino-eki: дорожна станція
 mie: преф. Міе
 #moo-tsuji:
 mountains: гори
@@ -71,10 +69,10 @@ philippines: Філіппіни
 pilgrimage: прочанство
 "pu quoc": Пу Куок
 retro: ретро
-route-13: траса 13
-route-32: траса 32
+route 13: траса 13
+route 32: траса 32
 route 4: траса 4
-route-439: траса 439
+route 439: траса 439
 ryokan: рьокан
 ryusendo cave: печера Рюусендо
 saitama: преф.Сайтама
@@ -85,23 +83,19 @@ shikoku: Шікоку
 shinto: шінто
 shizuoka: преф.Шізуока
 ski-resort: лижний курорт
-suspension-bridge: підвісний міст
 #tairyu-ji:
 #takayu-onsen:
 #takkokuno-iwaya:
 #tatsue-ji:
-#toba:
 tohoku: Тохоку
 #tokoton-yama:
 #tokugawa:
-#tokushima:
+tokushima: преф.Токушіма
 tokyo: Токіо
-#toyama:
+toyama: преф.Тояма
 travel: подорожі
-travel-tips: поради туристам
+travel tips: поради туристам
 tsunami: цунамі
-#tsuron-yu:
-#udatsu:
 ukrainian: українська
 vietnam: В’єтнам
 volcano: вулкан
@@ -112,4 +106,3 @@ wetland: болото
 yamadera: Ямадера
 yamagata: Ямаґата
 yuzawa: Юзава
-#zao-onsen:
