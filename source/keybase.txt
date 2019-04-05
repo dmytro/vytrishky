@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/dmytro_kovalov
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://vytrishky.info
+  * I am dmytro_kovalov (https://keybase.io/dmytro_kovalov) on keybase.
+  * I have a public key ASCC4rInM6YQx0ly8mMJDPp58HR1bTT6sc9Dg179kZPnzQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012082e2b22733a610c74972f263090cfa79f074756d34fab1cf43835efd9193e7cd0a",
+      "host": "keybase.io",
+      "kid": "012082e2b22733a610c74972f263090cfa79f074756d34fab1cf43835efd9193e7cd0a",
+      "uid": "83540fadfbcac38e55b9f1db25626419",
+      "username": "dmytro_kovalov"
+    },
+    "merkle_root": {
+      "ctime": 1554443218,
+      "hash": "c7b065d065ccb10efc91c79ecc1353c38b2e21a5b56063462587883118f1cf55f5d3d7bc776e58d9f5017eb78366a487ceddfe75b3894c3ac34e7f263bb1875f",
+      "hash_meta": "5aa4a221e252b7669a60e93d638c734f70ddb28cd05e33179d3bc6b27885c323",
+      "seqno": 5100697
+    },
+    "service": {
+      "entropy": "WAn7BSr4VeyimI92lVowOoHO",
+      "hostname": "vytrishky.info",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1554443332,
+  "expire_in": 504576000,
+  "prev": "10b02348fff1eefb53b415c7799c755d517a117aeabee1737cdccef6775f25bc",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgguKyJzOmEMdJcvJjCQz6efB0dW00+rHPQ4Ne/ZGT580Kp3BheWxvYWTESpcCCMQgELAjSP/x7vtTtBXHeZx1XVF6EXrqvuFzfNzO9ndfJbzEIMfNEV7elt6wP6CgpcDuvGCZhypSpfiiKvGQQlrdq1UCAgHCo3NpZ8RANHvM5Y16M4EQDOeuKYC/JZifz1jvhULT5z85Z178ts+422A1YNUbpwN7/Hq4LQl822QITmZV6NuEduMR4NjPB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEID2FWgVTn8YZHbZCk2Zi9qESqa13tbXop4gkBxLuOjZoo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dmytro_kovalov
+
+==================================================================
