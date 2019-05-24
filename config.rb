@@ -403,6 +403,7 @@ configure :build do
   ignore(%r{^assets/stylesheets/colorschemas/.*})
   ignore(%r{/src/})
   ignore(%r{/TODO/})
+  ignore(%r{^assets\/images\/watermark\.png})
 
 
   # if ENV['CDN_HOST']
