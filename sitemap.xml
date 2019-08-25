@@ -361,12 +361,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://dmytro.github.io/vytrishky/2013/07/23.html</loc>
-    <lastmod>2019-02-13T11:26:01+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://dmytro.github.io/vytrishky/2013/07/page/2.html</loc>
     <lastmod>2019-02-13T11:26:01+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -470,6 +464,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/series/page/5.html</loc>
+    <lastmod>2019-02-13T11:26:01+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2013/07/23.html</loc>
     <lastmod>2019-02-13T11:26:01+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
