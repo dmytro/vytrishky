@@ -367,6 +367,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2019/08/28/hokkaido_trees.html</loc>
+    <lastmod>2019-08-29T19:24:43+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2004/10/20.html</loc>
     <lastmod>2019-02-13T11:26:01+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1297,6 +1303,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/furano.html</loc>
+    <lastmod>2019-02-13T14:26:49+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/biei.html</loc>
+    <lastmod>2019-02-13T14:26:49+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2019.html</loc>
     <lastmod>2019-02-13T11:26:01+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1304,6 +1322,12 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2019/08.html</loc>
+    <lastmod>2019-02-13T11:26:01+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2019/08/28.html</loc>
     <lastmod>2019-02-13T11:26:01+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
