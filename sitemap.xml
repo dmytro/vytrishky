@@ -175,6 +175,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/2020/06/17/philippines2_cabilao.html</loc>
+    <lastmod>2020-07-18T12:50:44+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/2016/03/12/zemletrus_p3_panika.html</loc>
     <lastmod>2019-02-13T15:10:18+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1045,6 +1051,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://dmytro.github.io/vytrishky/tags/cabilao.html</loc>
+    <lastmod>2019-02-13T14:26:49+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://dmytro.github.io/vytrishky/tags/beach.html</loc>
     <lastmod>2019-02-13T14:26:49+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1340,6 +1352,18 @@
   </url>
   <url>
     <loc>http://dmytro.github.io/vytrishky/2020.html</loc>
+    <lastmod>2019-02-13T11:26:01+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2020/06.html</loc>
+    <lastmod>2019-02-13T11:26:01+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://dmytro.github.io/vytrishky/2020/06/17.html</loc>
     <lastmod>2019-02-13T11:26:01+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
