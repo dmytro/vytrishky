@@ -11,7 +11,7 @@ gem "html2slim"
 gem "slim"
 gem 'middleman-minify-html'
 
-gem 'rmagick', '~>2.3'
+gem 'rmagick', '~>5.3'
 
 gem 'font-awesome-middleman'
 
